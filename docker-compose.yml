@@ -1,0 +1,31 @@
+version: '3'
+services:
+
+  app:
+    build: docker
+    container_name: chakruna
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./framework:/var/www/html
+      - ./log:/var/log/nginx
+      - ./docker/nginx/default.conf:/etc/nginx/sites-enabled/default.conf
+      - ./docker/php/20-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    env_file:
+      - .env
+
+  # dev mysql db:
+  db:
+    image: mysql
+    container_name: chakrunadb
+    volumes:
+      - ./log:/var/log/mysql
+      - docker/dump:/dump
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"
+
+volumes:
+  db:

@@ -1,0 +1,121 @@
+{
+"key" : "astroRU",
+"lang" 	: "ru",
+"title" : "Урок астрономии", 
+"author"	: "Соболь Роман",
+"steps" : [
+	{
+		"title" 	: "Урок астрономии",
+	 	"content"	: "В этом обучающем туре мы совершим небольшой экскурс в астрономию и немного поговорим на тему природных циклов и природного времени.",
+	 	"element" : "",
+	 	"placement": "",
+	 	"backdrop" : true
+	},
+	{
+		"title"		: "Направление вращения",
+		"content"	: "Основной темой этого тура будет разговор о направлении вращения в нашем хронометре.",
+		"element" : "#board",
+		"placement": "bottom"
+	},
+	{
+		"title"		: "Природные циклы",
+		"content"	: "И для этого мы рассмотрим реальные природные циклы с их астрономическими телами.",
+		"element" : "#board",
+		"placement": "top"
+	},
+	{
+		"title"		: "Земная орбита",
+		"content"	: "Взгляните на это колесо. По сути своей это орбита вращения Земли вокруг Солнца.",
+		"element" : "#sunWheel",
+		"placement": "right",
+		"label" : "stopRotate"
+	},
+	{
+		"title"		: "Путешествие Земли",
+		"content"	: "Центр этого колеса - это наше Солнце, а зелёная звёздочка - это наша Земля, которая вокруг него путешествует.",
+		"element" : "#sunWheel",
+		"placement": "right",
+		"label" : "startSun"
+	},
+	{
+		"title"		: "Северный полюс мира",
+		"content"	: "Представьте что вы смотрите на Землю и Солнце сверху. В астрономии эту позицию наблюдателя называют северным полюсом мира.",
+		"element" : "#sunWheel",
+		"placement": "right"
+	},
+	{
+		"title"		: "Первый факт",
+		"content"	: "Из этой позиции видно, что Земля вращается вокруг Солнца против часовой стрелки. И это астрономический факт.",
+		"element" : "#sunWheel",
+		"placement": "right",
+		"label"	: "startSun"
+	},
+	{
+		"title"		: "Лунная орбита",
+		"content"	: "Теперь взгляните на среднее колесо. Это не чтои иное, как орбита вращения Луны вокруг Земли.",
+		"element" : "#moonWheel",
+		"placement": "right",
+		"label"	: "stopRotate"
+	},
+	{
+		"title"		: "Путешествие Луны",
+		"content"	: "Центр этого колеса - это наша Земля, а зелёная звёздочка - это Луна, которая вокруг неё путешествует.",
+		"element" : "#moonWheel",
+		"placement": "right",
+		"label"	: "startMoon"
+	},
+	{
+		"title"		: "Второй факт",
+		"content"	: "И вновь мы убеждаемся, что с точки зрения северного полюса мира Луна вращается вокруг Земли против часовой стрелки!",
+		"element" : "#moonWheel",
+		"placement": "right",
+		"label"	: "startMoon"
+	},
+	{
+		"title"		: "Осевое вращение Земли",
+		"content"	: "Ну и наконец взглянем на третье колесо. Оно отображает вращение Земли вокруг своей оси.",
+		"element" : "#earthWheel",
+		"placement": "left",
+		"label" : "stopRotate"
+	},
+	{
+		"title"		: "Путешествие наблюдателя",
+		"content"	: "Представьте, что центр этого колеса - это проекция земной оси. Ну а зелёная звёздочка - это вы сами - путешествуете вокруг земной оси вместе с остальной Землёй.",
+		"element" : "#earthWheel",
+		"placement": "left",
+		"label" : "startEarth"
+	},
+	{
+		"title"		: "Третий факт",
+		"content"	: "И вновь мы обнаруживаем, что с точки зрения северного полюса мира вращение это происходит против часовой стрелки!",
+		"element" : "#earthWheel",
+		"placement": "left",
+		"label" : "startEarth"
+	},
+	{
+		"title"		: "Выводы",
+		"content"	: "Что это - удивительные совпадения, или нечто большее? Предлагаем сделать выводы самостоятельно.",
+		"element" : "#board",
+		"placement": "top"
+	},
+	{
+		"title"		: "Спасибо за внимание!",
+		"content"	: "На этом наш небольшой экскурс в астрономию заканчивается. До новых встреч!",
+		"element" : "",
+		"placement": "",
+		"label" : "lastStep",
+		"backdrop" : true
+	}
+],
+"startOptions" : { 
+		"modals" : false, "spokes" : false,	"buttons" : false, "spooler" : false,
+		"arrows" : true
+	},
+"initActions" : {
+	"startSun"	: " if (!staff.rotate) staff.rotateStart('sun'); ",
+	"stopRotate": " staff.rotateStop(); ",
+	"startMoon" : " if (!staff.rotate) staff.rotateStart('moon'); ",
+	"startEarth": " if (!staff.rotate) staff.rotateStart('earth'); ",
+	"lastStep" 	: " staff.rotateStop(); clock.present(); "
+	}
+}

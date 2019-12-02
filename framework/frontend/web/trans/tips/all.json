@@ -1,0 +1,275 @@
+[
+  {"mainTitle":
+  {
+    "title":"Shamanic Time",
+    "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam earum tenetur error optio obcaecati odio possimus dolorem...",
+    "note":"(this is lorem fish)"
+  },
+    "lang":
+    {
+      "title":"Languege Menu",
+      "content":"This is menu of languege change",
+      "note":"(click for change your languege)"
+    },
+    "lang-change":
+    {
+      "title":"Languege for change",
+      "content":"This is one of available languege for change",
+      "note":"(click for change this languege)",
+      "key":"lang-change",
+      "lang":"en"
+    },
+    "editLang":
+    {
+      "title":"Edit current languege",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sunt earum deserunt beatae veniam laborum architecto culpa, reiciendis dicta quam, iusto et nesciunt. Quaerat saepe consectetur esse similique deleniti eveniet!",
+      "note":"(under development)",
+      "key":"editLang",
+      "lang":"en"
+    },
+    "addLang":
+    {
+      "title":"Append new languege",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sunt earum deserunt beatae veniam laborum architecto culpa, reiciendis dicta quam, iusto et nesciunt. Quaerat saepe consectetur esse similique deleniti eveniet!",
+      "note":"(under development)",
+      "key":"addLang",
+      "lang":"en"
+    },
+    "boxes":
+    {
+      "title":"Current box change",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ad laudantium, debitis vero maiores quo dolor accusamus blanditiis hic natus optio incidunt, veritatis dolores eum tempora fugit corporis ipsum consequatur.",
+      "note":"(click for change current box)"
+    },
+    "editBox":
+    {
+      "title":"Edit current box",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sunt earum deserunt beatae veniam laborum architecto culpa, reiciendis dicta quam, iusto et nesciunt. Quaerat saepe consectetur esse similique deleniti eveniet!",
+      "note":"(under development)",
+      "key":"editBox",
+      "lang":"en"
+    },
+    "addBox":
+    {
+      "title":"Append new box",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sunt earum deserunt beatae veniam laborum architecto culpa, reiciendis dicta quam, iusto et nesciunt. Quaerat saepe consectetur esse similique deleniti eveniet!",
+      "note":"(under development)",
+      "key":"addBox",
+      "lang":"en"
+    },
+    "box-default":
+    {
+      "title":"Default box",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ad laudantium, debitis vero maiores quo dolor accusamus blanditiis hic natus optio incidunt, veritatis dolores eum tempora fugit corporis ipsum consequatur.",
+      "note":"(click for change default box for current languege)",
+      "key":"box-default",
+      "lang":"en"
+    },
+    "box-custom":
+    {
+      "title":"Custom box",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ad laudantium, debitis vero maiores quo dolor accusamus blanditiis hic natus optio incidunt, veritatis dolores eum tempora fugit corporis ipsum consequatur.",
+      "note":"(click for change this box for current languege)",
+      "key":"box-custom",
+      "lang":"en"
+    },
+    "options":
+    {
+      "title":"Application options",
+      "content":"This is menu of application options",
+      "note":"(click for change options)"
+    },
+    "anima":
+    {
+      "title":"Animation Option",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates impedit dolorum earum aliquid ullam, harum sit fuga cumque, quasi iusto quaerat delectus ad quae et natus voluptate voluptas debitis nostrum.",
+      "note":"(click for toggle animation show)",
+      "key":"anima",
+      "lang":"en"
+    },
+    "tips":
+    {
+      "title":"Tooltips Option",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates impedit dolorum earum aliquid ullam, harum sit fuga cumque, quasi iusto quaerat delectus ad quae et natus voluptate voluptas debitis nostrum.",
+      "note":"(click for toggle tooltips show)",
+      "key":"tips",
+      "lang":"en"
+    },
+    "quotes":
+    {
+      "title":"Availables Quotes",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates impedit dolorum earum aliquid ullam, harum sit fuga cumque, quasi iusto quaerat delectus ad quae et natus voluptate voluptas debitis nostrum.",
+      "note":"(click for toggle tooltips show)"
+    },
+    "manual":
+    {
+      "title":"All manuals",
+      "content":"This is menu of all availibles teaching and esoteric manuals about this application",
+      "note":"(click for change manual)"
+    },
+    "tour":
+    {
+      "title":"Educational Tour",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, accusantium. Cupiditate necessitatibus ab nemo commodi quod unde, facere doloribus. Necessitatibus excepturi corrupti quae ab rem, eveniet perferendis dolor deserunt consequuntur!",
+      "note":"(click for start this tour)",
+      "key":"tour",
+      "lang":"en"
+    },
+    "editTour":
+    {
+      "title":"Edit Tours",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda asperiores molestiae sequi obcaecati harum omnis consectetur esse illum quisquam! Fuga nesciunt tempore officiis expedita, earum vitae, deserunt itaque quam!",
+      "note":"(under development)"
+    },
+    "addTour":
+    {
+      "title":"Add New Tour",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda asperiores molestiae sequi obcaecati harum omnis consectetur esse illum quisquam! Fuga nesciunt tempore officiis expedita, earum vitae, deserunt itaque quam!",
+      "note":"(under development)"
+    },
+    "btn-menu":{"title":"Open Menu","content":"This button open application menu.","note":"(click for open menu)"},"btn-now":{"title":"Present time","content":"This button spooling wheels in moment of present time and set clock on.","note":"(click for spooling to present time)"},"btn-show":{"title":"Show time","content":"This button spooling wheels in custom moment of time and set clock off.","note":"(click for spooling to custom time)"},"btn-save":{"title":"Save button","content":"This button save chosen location...","note":"(click for save location)"},"btn-up":{"title":"Wheel Scroller Up","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quos aliquam recusandae similique dolorem ullam, praesentium dolores dolore quae est facere, odit cum voluptatem repellat accusantium laborum iusto eaque. Eius.","note":"(click for scroll to previus wheel)"},"btn-down":{"title":"Wheel Scroller Down","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas enim dolor, quos pariatur impedit mollitia iusto ducimus consequatur reprehenderit commodi harum amet. Quaerat explicabo, similique fuga reiciendis perferendis earum rerum.","note":"(click for scroll to next wheel)"},"date":{"title":"Current date","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus. Explicabo, minima, quibusdam!","note":"(change date in this input)","key":"date","lang":"en"},"time":{"title":"Current time","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(change time in this input)"},"localList":{"title":"Current location","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(change location in this select)","key":"localList","lang":"en"},"gps":{"title":"GPS","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(input latitude and longitude)","key":"gps","lang":"en"},"lat":{"title":"Latitude","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(input latitude if as needed)"},"lng":{"title":"Longitude","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus..","note":"(input longitude if as needed)"},"sun-spoke":{"title":"Spoke of Sun Wheel","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info, double click for move show moment)","key":"sun-spoke","lang":"en"},"moon-spoke":{"title":"Spoke of Moon Wheel","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info, double click for move show moment)","key":"moon-spoke","lang":"en"},"earth-spoke":{"title":"Spoke of Earth Wheel","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info, double click for move show moment)","key":"earth-spoke","lang":"en"},"spring":{"title":"Spring quarter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"spring-summer":{"title":"Between spring and summer","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"summer":{"title":"Summer quarter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"summer-autumn":{"title":"Between summer and autumn","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"autumn":{"title":"Autumn quarter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"autumn-winter":{"title":"Between autumn and winter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"winter":{"title":"Winter quarter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"winter-spring":{"title":"Between winter and spring","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"growing":{"title":"Growing Moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"growing-full":{"title":"Between growing and full moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"full":{"title":"Full Moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"full-waning":{"title":"Between full and waning moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"waning":{"title":"Waning Moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"waning-new":{"title":"Between waning and new moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"new":{"title":"New Moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"new-growing":{"title":"Between new and groing moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"morning":{"title":"Morning","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"morning-day":{"title":"Between sunrise and midday","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"day":{"title":"Day","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"day-evening":{"title":"Between midday and sunset","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"evening":{"title":"Evening","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"evening-night":{"title":"Between sunset and midnight","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"night":{"title":"Night","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"","key":"night","lang":"en"},"night-morning":{"title":"Between midnight and sunrise","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"staffsun":{"title":"Sun running moment","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(use spokes, form or buttons for change another running moment)"},"staffmoon":{"title":"Moon running moment","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(use spokes, form or buttons for change another running moment)"},"staffearth":{"title":"Earth running moment","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(use spokes, form or buttons for change another running moment)"},"earth-next":{"title":"Spooler Next","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for next solar day)"},"earth-lair":{"title":"Earth Lair","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for change current lair pike moment)"},"earth-prev":{"title":"Spooler Previus","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for previus solar day)"},"moon-next":{"title":"Spooler Next","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for next moon cycle)"},"moon-lair":{"title":"Moon Lair","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for change current moon lair pike moment)","key":"moon-lair","lang":"en"},"moon-prev":{"title":"Spooler Previus","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for previus moon cylce)"},"sun-next":{"title":"Spooler Next","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for next sun-year cycle)"},"sun-lair":{"title":"Sun Lair","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for change current sun lair pike moment)"},"sun-prev":{"title":"Spooler Previus","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for previus solar-year cylce)"},"lairTitle":{"title":"Shamanic Lair","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"spokeImg":{"title":"Spoke Image","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"lairQuote":{"title":"Tematic Quote","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"lairPike":{"title":"Pike of showing lair","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for spooling time to this lair pike)"},"sunTime":{"title":"Sun Phase","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"moonTime":{"title":"Moon Phase","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"earthTime":{"title":"Earth Phase","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"localInfo":{"title":"Current Lacation","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"latInfo":{"title":"Current latitude","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"lngInfo":{"title":"Current longitude","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"orbitalCulture":{"title":"Unity Culture","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"lairDesc":{"title":"Lair Description","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"holidays":{"title":"Lair Holidays and Ceremonies","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"festivals":{"title":"World Festivals","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"ezoWorld":{"title":"Ezoteric World","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"spokeDesc":{"title":"World quarter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"spokeElement":{"title":"Nature Element","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"spokePower":{"title":"Shamanic Power","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"key":"en","file":"en_tips.json","packType":"tips"},
+  {"mainTitle":
+  {
+    "title":"Шаманское Время",
+    "content":"Это название нашего проекта гармоничного развития, а также это особый стандарт времени, построенный на реальных астрономических циклах.",
+    "note":"(кликни для подробной информации)",
+    "key":"mainTitle",
+    "lang":"ru"
+  },
+    "lang":
+    {
+      "title":"Выбор языка",
+      "content":"Этот пункт меню содержит все доступные языки программы. Если нужного языка нет - его можно подключить в пользовательских настройках.",
+      "note":"(кликни для выбора языка)",
+      "key":"lang",
+      "lang":"ru"
+    },
+    "lang-change":
+    {
+      "title":"Язык на выбор",
+      "content":"Это один из имеющихся языков на выбор. Если эта строчка уже была подсвечена, значит этот язык уже активен. Если нужного языка в этом списке нет - его можно подключить в пользовательских настройках.",
+      "note":"(кликни для выбора этого языка)",
+      "key":"lang-change",
+      "lang":"ru"
+    },
+    "editLang":
+    {
+      "title":"Редактировать текущий язык",
+      "content":"Эта опция позволяет редактировать текущий язык программы. Например, изменять переводы языковых меток.",
+      "note":"(опция в разработке)",
+      "key":"editLang",
+      "lang":"ru"
+    },
+    "addLang":
+    {
+      "title":"Добавить язык",
+      "content":"Этот пункт меню позволяет добавить новый язык программы. Для этого потребуется заполнить всю необходимую информацию. ",
+      "note":"(опция в разработке)",
+      "key":"addLang",
+      "lang":"ru"
+    },
+    "boxes":
+    {
+      "title":"Выбор набора спиц",
+      "content":"Это меню содержит все доступные наборы спиц. Если нужного набора нет - его можно создать или подключить в пользовательских настройках.",
+      "note":"(кликни для выбора набора спиц)",
+      "key":"boxes",
+      "lang":"ru"
+    },
+    "editBox":
+    {
+      "title":"Редактировать текущий набор","content":"Эта опция позволяет редактировать текущий набор спиц и колёс. Для этого нужны соответствующие права.",
+      "note":"(опция в разработке)",
+      "key":"editBox",
+      "lang":"ru"
+    },
+    "addBox":
+    {
+      "title":"Добавить новый набор",
+      "content":"Эта опция позволяет добавлять новый набор спиц и колёс на сервер. Для этого нужны соответствующие права.",
+      "note":"(опция в разработке)",
+      "key":"addBox",
+      "lang":"ru"
+    },
+    "box-default":
+    {
+      "title":"Стандартный набор",
+      "content":"Эта опция позволяет выбрать набор спиц по умолчанию для текущего языка. Если эта опция активна - значит выбран именно этот набор. Изменить набор по умолчанию для текущего языка можно в пользовательских настройках.",
+      "note":"(кликни для выбора набора спиц по умолчанию для текущего языка)",
+      "key":"box-default",
+      "lang":"ru"
+    },
+    "box-custom":
+    {
+      "title":"Пользовательский набор",
+      "content":"Эта опция позволяет выбрать данный набор спиц для текущего языка. Если эта опция активна - значит выбран именно этот набор.",
+      "note":"(кликни для выбора данного набора спиц для текущего языка)",
+      "key":"box-custom",
+      "lang":"ru"
+    },
+    "options":
+    {
+      "title":"Настройки программы",
+      "content":"Это меню содержит различные настройки программы. Например, здесь можно включить/выключить анимацию и всплывающие подсказки.",
+      "note":"(кликни для выбора настроек)",
+      "key":"options",
+      "lang":"ru"
+    },
+    "anima":
+    {
+      "title":"Показ анимации",
+      "content":"Этот пункт меню позволяет включать и отключать анимацию перемещения точки показа. Если пункт активен - анимация включена, и наоборот.",
+      "note":"(кликни, чтобы вкл/выкл анимацию)",
+      "key":"anima",
+      "lang":"ru"
+    },
+    "tips":
+    {
+      "title":"Показ подсказок",
+      "content":"Этот пункт меню позволяет включать и отключать показ всплывающих подсказок. Если пункт активен - подсказки включены, и наоборот.",
+      "note":"(кликни, чтобы вкл/выкл подсказки)",
+      "key":"tips",
+      "lang":"ru"
+    },
+    "quotes":
+    {
+      "title":"Подборка цитат",
+      "content":"Этот пункт меню позволяет включать и выключать показ данной подборки цитат в окне информации по спицам. Если пункт активен - значит эта подборка уже выбрана, и наоборот.",
+      "note":"(кликни, чтобы вкл/выкл показ этой подборки цитат)",
+      "key":"quotes",
+      "lang":"ru"
+    },
+    "manual":
+    {
+      "title":"Меню туров",
+      "content":"Этот пункт меню содержит все доступные обучающие мануалы, а также эзотерические туры по этой программе. Также здесь можно создавать и добавлять свои мануалы и туры.",
+      "note":"(кликни для выбора мануала)",
+      "key":"manual",
+      "lang":"ru"
+    },
+    "tour":
+    {
+      "title":"Обучающий тур",
+      "content":"Это один из обучающих туров мануала, доступный для прохождения на данный момент для выбранного языка.",
+      "note":"(кликни чтобы начать прохождениe)",
+      "key":"tour",
+      "lang":"ru"
+    },
+    "editTour":
+    {
+      "title":"Редактировать туры",
+      "content":"Эта опция вызывает окно редактирования существующих туров. Она будет доступна только для пользователей с соответствующими правами.",
+      "note":"(опция в разработке)",
+      "key":"editTour",
+      "lang":"ru"
+    },
+    "addTour":
+    {
+      "title":"Добавить новый тур",
+      "content":"Эта опция вызывает окно создания тура. Она будет доступна только для пользователей с соответствующими правами.",
+      "note":"(опция в разработке)",
+      "key":"addTour",
+      "lang":"ru"
+    },
+    "btn-menu":{"title":"Меню","content":"Эта кнопка открывает главное меню программы","note":"(кликни чтобы открыть меню)","key":"btn-menu","lang":"ru"},"btn-now":{"title":"Настоящее время","content":"Эта кнопка прокручивает колёса к моменту настоящего времени и запускает часы. Если эта кнопка светится, значит часы показывают настоящее время.","note":"(кликни для возвращения в настоящий момент)","key":"btn-now","lang":"ru"},"btn-show":{"title":"Показать время","content":"Эта кнопка прокручивает колёса к выбранному моменту времени и выключает часы. Если эта кнопка светится, значит часы показывают некий момент из прошлого, или будущего.","note":"(кликни для перехода к выбранному моменту)","key":"btn-show","lang":"ru"},"btn-save":{"title":"Сохранить","content":"С помощью этой кнопки можно сохранять текущее состояние. В этой версии программы она сохраняет введённую локацию - название и координаты.","note":"(кликни чтобы сохранить локацию)","key":"btn-save","lang":"ru"},"btn-up":{"title":"Предыдущее Колесо","content":"С помощью этой кнопки можно прокручивать экран к показу предыдущего колеса. Если на экране первое колесо (\"Солнечное\") - кнопка не будет срабатывать.","note":"(кликни чтобы прокрутить к предыдущему колесу)","key":"btn-up","lang":"ru"},"btn-down":{"title":"Следующее Колесо","content":"С помощью этой кнопки можно прокручивать экран к показу следующего колеса. Если на экране последнее колесо (третье, \"Земное\") - кнопка не будет срабатывать.","note":"(кликни чтобы прокрутить к следующему колесу)","key":"btn-down","lang":"ru"},"date":{"title":"Дата показа","content":"В этом поле указана григорианская дата, относительно которой отображаются природные циклы. ","note":"(кликни по полю чтобы выбрать дату)","key":"date","lang":"ru"},"time":{"title":"Время показа","content":"В этом поле указано время суток, относительно которого отображаются природные циклы.","note":"(кликни по полю чтобы изменить время)","key":"time","lang":"ru"},"localList":{"title":"Выбор локации","content":"В этом списке указана локация, относительно которой отображаются природные циклы.","note":"(кликни по списку, чтобы выбрать локацию)","key":"localList","lang":"ru"},"gps":{"title":"GPS","content":"Эти два поля отображают географические координаты широты и долготы для текущей локации. Исходя из этих координат рассчитываются показания суточного цикла (\"Земное колесо\").","note":"(введи координаты вручную, если нужной локации нет в списке)","key":"gps","lang":"ru"},"lat":{"title":"Широта","content":"Это поле отображает географическую широту для текущей локации. Она влияет на показания суточного цикла (\"Земное колесо\").","note":"(введи широту вручную, если нужной локации нет в списке)","key":"lat","lang":"ru"},"lng":{"title":"Долгота","content":"Это поле отображает географическую долготу для текущей локации. Она влияет на показания суточного цикла (\"Земное колесо\").","note":"(введи долготу вручную, если нужной локации нет в списке)","key":"lng","lang":"ru"},"sun-spoke":{"title":"Солнечная спица","content":"Это одна из шестнадцати спиц Солнечного колеса. Ей соответствует некоторое направление, а также она указывает на свой особый момент солнечного годового цикла.","note":"(кликни один раз, чтобы открыть информацию, два раза - чтобы переместить активную точку)","key":"sun-spoke","lang":"ru"},"moon-spoke":{"title":"Лунная спица","content":"Это одна из шестнадцати спиц Лунного колеса. Ей соответствует некоторое направление, а также она указывает на свой особый момент лунного цикла.","note":"(кликни один раз, чтобы открыть информацию, два раза - чтобы переместить активную точку)","key":"moon-spoke","lang":"ru"},"earth-spoke":{"title":"Земная спица","content":"Это одна из шестнадцати спиц Земного колеса. Ей соответствует некоторое направление, а также она указывает на свой особый момент суточного земного цикла.","note":"(кликни один раз, чтобы открыть информацию, два раза - чтобы переместить активную точку)","key":"earth-spoke","lang":"ru"},"spring":{"title":"Весна","content":"Весна в стандарте \"Шаманское время\" - это условная четверть года. Причём середина этой солнечной четверти - центральная спица - всегда проходит в точности через момент весеннего равноденствия.","note":"","key":"spring","lang":"ru"},"spring-summer":{"title":"Между весной и летом","content":"Весна в стандарте \"Шаманское время\" плавно перетекает в лето. И этот переход происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами весеннего равноденствия и летнего солнцестояния.","note":""},"summer":{"title":"Лето","content":"Лето в стандарте \"Шаманское время\" - это условная четверть года. Причём середина этой солнечной четверти - центральная спица - всегда проходит в точности через момент летнего солнцестояния.","note":"","key":"summer","lang":"ru"},"summer-autumn":{"title":"Между летом и осенью","content":"Лето в стандарте \"Шаманское время\" плавно перетекает в осень. И этот переход происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами летнего солнцестояния и осеннего равноденствия.","note":""},"autumn":{"title":"Осень","content":"Осень в стандарте \"Шаманское время\" - это условная четверть года. Причём середина этой солнечной четверти - центральная спица - всегда проходит в точности через момент осеннего равноденствия.","note":"","key":"autumn","lang":"ru"},"autumn-winter":{"title":"Между осенью и зимой","content":"Осень в стандарте \"Шаманское время\" плавно перетекает в зиму. И этот переход происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами осеннего равноденствия и зимнего солнцестояния.","note":""},"winter":{"title":"Зима","content":"Зима в стандарте \"Шаманское время\" - это условная четверть года. Причём середина этой солнечной четверти - центральная спица - всегда проходит в точности через момент зимнего солнцестояния.","note":"","key":"winter","lang":"ru"},"winter-spring":{"title":"Между зимой и весной","content":"Зима в стандарте \"Шаманское время\" плавно перетекает в весну. И этот переход происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами зимнего солнцестояния и весеннего равноденствия.","note":""},"growing":{"title":"Растущая луна","content":"Растущая, или молодая луна в стандарте \"Шаманское время\" - это условная четверть лунного цикла. Причём середина этой лунной четверти - центральная спица - всегда проходит в точности через особый момент под названием \"Праволуние\"","note":"","key":"growing","lang":"ru"},"growing-full":{"title":"Между растущей и полной луной","content":"Растущая луна в стандарте \"Шаманское время\" плавно превращается Полную. И это превращение происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами Праволуния и Полнолуния.","note":""},"full":{"title":"Полная луна","content":"Полная луна в стандарте \"Шаманское время\" - это условная четверть лунного цикла. Причём середина этой лунной четверти - центральная спица - всегда проходит в точности через момент Полнолуния.","note":"","key":"full","lang":"ru"},"full-waning":{"title":"Между полной и убывающей луной","content":"Полная луна в стандарте \"Шаманское время\" плавно превращается Старую. И это превращение происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами Полнолуния и Леволуния.","note":""},"waning":{"title":"Убывающая луна","content":"Старая, или убывающая луна в стандарте \"Шаманское время\" - это условная четверть лунного цикла. Причём середина этой лунной четверти - центральная спица - всегда проходит в точности через особый момент под названием \"Леволуние\".","note":"","key":"waning","lang":"ru"},"waning-new":{"title":"Между убывающей и новой луной","content":"Старая луна в стандарте \"Шаманское время\" плавно превращается в Новую. И это превращение происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами Леволуния и Новолуния.","note":""},"new":{"title":"Новая луна","content":"Новая луна в стандарте \"Шаманское время\" - это условная четверть лунного цикла. Причём середина этой лунной четверти - центральная спица - всегда проходит в точности через момент Новолуния.","note":"","key":"new","lang":"ru"},"new-growing":{"title":"Между новой и растущей луной","content":"Новая луна в стандарте \"Шаманское время\" плавно превращается в Растущую. И это превращение происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами Новолуния и Праволуния.","note":""},"morning":{"title":"Утро","content":"Утро в стандарте \"Шаманское время\" - это условная четверть суточного цикла. Причём середина этой земной четверти - центральная спица - всегда проходит в точности через момент Восхода солнца для текущей локации","note":"","key":"morning","lang":"ru"},"morning-day":{"title":"Между рассветом и полднем","content":"Утро в стандарте \"Шаманское время\" плавно перетекает в день. И этот переход происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами рассвета и полдня.","note":""},"day":{"title":"День","content":"День в стандарте \"Шаманское время\" - это условная четверть суточного цикла. Причём середина этой земной четверти - центральная спица - всегда проходит в точности через момент Полдня, или зенита солнца для текущей локации.","note":"","key":"day","lang":"ru"},"day-evening":{"title":"Между полднем и закатом","content":"День в стандарте \"Шаманское время\" плавно перетекает в вечер. И этот переход происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами полдня и заката.","note":""},"evening":{"title":"Вечер","content":"Вечер в стандарте \"Шаманское время\" - это условная четверть суточного цикла. Причём середина этой земной четверти - центральная спица - всегда проходит в точности через момент Заката солнца для текущей локации.","note":"","key":"evening","lang":"ru"},"evening-night":{"title":"Между закатом и полуночью","content":"Вечер в стандарте \"Шаманское время\" плавно перетекает в ночь. И этот переход происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами заката и полуночи.","note":""},"night":{"title":"Ночь","content":"Ночь в стандарте \"Шаманское время\" - это условная четверть суточного цикла. Причём середина этой земной четверти - центральная спица - всегда проходит в точности через момент Полуночи или надира солнца для текущей локации.","note":"","key":"night","lang":"ru"},"night-morning":{"title":"Между полуночью и рассветом","content":"Ночь в стандарте \"Шаманское время\" плавно перетекает в утро. И этот переход происходит как раз вокруг данной спицы. Её пик - это точная середина между моментами полуночи и рассвета.","note":""},"staffsun":{"title":"Момент показа","content":"Это момент показа относительно которого отображается весь годовой цикл (\"Солнечное колесо\").","note":"(используй спицы, форму внизу или кнопки для выбора другого момента показа)","key":"staffsun","lang":"ru"},"staffmoon":{"title":"Момент показа","content":"Это момент показа относительно которого отображается весь лунный цикл (\"Лунное колесо\").","note":"(используй спицы, форму внизу или кнопки для выбора другого момента показа)","key":"staffmoon","lang":"ru"},"staffearth":{"title":"Момент показа","content":"Это момент показа относительно которого отображается весь суточный цикл (\"Земное колесо\").","note":"(используй спицы, форму внизу или кнопки для выбора другого момента показа)","key":"staffearth","lang":"ru"},"earth-next":{"title":"Прокрутка вперёд","content":"Эта кнопка прокручивает момент показа на одни сутки в будущее, устанавливая его при этом на пик текущего \"земного дома\". Чтобы больше узнать про \"дома\" загляни в Мануал.","note":"(кликни чтобы прокрутить момент показа на сутки вперёд)","key":"earth-next","lang":"ru"},"earth-lair":{"title":"Земной дом","content":"Этот название \"земного дома\", внутри которого находится текущий момент показа. Если эта кнопка светится, значит показан эпицентр этого \"земного дома\". Чтобы больше узнать про \"дома\" загляни в Мануал.","note":"(кликни чтобы перемотать на пиковый момент этого земного дома)","key":"earth-lair","lang":"ru"},"earth-prev":{"title":"Прокрутка назад","content":"Эта кнопка прокручивает момент показа на одни сутки в прошлое, устанавливая его при этом на пик текущего \"земного дома\". Чтобы больше узнать про \"дома\" загляни в Мануал.","note":"(кликни чтобы прокрутить момент показа на сутки назад)","key":"earth-prev","lang":"ru"},"moon-next":{"title":"Прокрутка вперёд","content":"Эта кнопка прокручивает момент показа на один лунный цикл в будущее, устанавливая его при этом на пик текущего \"лунного дома\". Чтобы больше узнать про \"дома\" загляни в Мануал.","note":"(кликни чтобы прокрутить момент показа на один месяц вперёд)","key":"moon-next","lang":"ru"},"moon-lair":{"title":"Лунный дом","content":"Этот название \"лунного дома\", внутри которого находится текущий момент показа. Если эта кнопка светится, значит показан эпицентр этого \"земного дома\". Чтобы больше узнать про \"дома\" загляни в Мануал.","note":"(кликни чтобы перемотать на пиковый момент этого лунного дома)","key":"moon-lair","lang":"ru"},"moon-prev":{"title":"Прокрутка назад","content":"Эта кнопка прокручивает момент показа на один лунный цикл в прошлое, устанавливая его при этом на пик текущего \"лунного дома\". Чтобы больше узнать про \"дома\" загляни в Мануал.","note":"(кликни чтобы прокрутить момент показа на один месяц назад)","key":"moon-prev","lang":"ru"},"sun-next":{"title":"Прокрутка вперёд","content":"Эта кнопка прокручивает момент показа на один солнечный цикл в будущее, устанавливая его при этом на пик текущего \"солнечного дома\". Чтобы больше узнать про \"дома\" загляни в Мануал.","note":"(кликни чтобы прокрутить момент показа на один cолнечный год вперёд)","key":"sun-next","lang":"ru"},"sun-lair":{"title":"Солнечный дом","content":"Этот название \"солнечного дома\", внутри которого находится текущий момент показа. Если эта кнопка светится, значит показан эпицентр этого \"солнечного дома\". Чтобы больше узнать про \"дома\" загляни в Мануал.","note":"(кликни чтобы перемотать на пиковый момент этого солнечного дома)","key":"sun-lair","lang":"ru"},"sun-prev":{"title":"Прокрутка назад","content":"Эта кнопка прокручивает момент показа на один солнечный цикл в прошлое, устанавливая его при этом на пик текущего \"солнечного дома\". Чтобы больше узнать про \"дома\" загляни в Мануал.","note":"(кликни чтобы прокрутить момент показа на один солнечный год назад)","key":"sun-prev","lang":"ru"},"lairTitle":{"title":"Шаманский дом","content":"Это название выбранного шаманского дома, о котором в этом окне собрана различная информация. Например, здесь можно узнать когда эпицентр этого дома, какая это фаза цикла, локация, а также всячески культурные и эзотерические сведения. Чтобы узнать больше про шаманаские дома загляни в Мануал.","note":"(кликни чтобы открыть персональную страницу этого дома)"},"spokeImg":{"title":"Изображение спицы","content":"Это изображение срединной спицы выбранного дома. Оно взято из активного на данный момент набора спиц. Также оно является символом соответстующей шаманской силы.","note":"(кликни чтобы узнать больше об этой шаманской силе)"},"lairQuote":{"title":"Тематическая цитата","content":"Это тематическая цитата для выбранного шаманского дома. Отключить показ цитат в этом окне, либо выбрать их другой набор можно в меню настроек","note":""},"lairPike":{"title":"Эпицентр шаманского дома","content":"В этой строке указан момент времени, который приходится точно на середину данного шаманского дома. Иногда этот момент называют \"спицей колеса\". Часто эпицентры приходятся на особые природные моменты времени, такие как восход солнца, момент полнолуния, зимнее солнцестояние и так далее.","note":"(нажми на кнопку справа, чтобы перемотать время к эпицентру этого дома)"},"sunTime":{"title":"Время года","content":"В этой строке указана пора года, на которую приходится данный солнечный дом. В стандарте \"Шаманское Время\" солнечный год делится на четыре поры, но есть четыре особых солнечных дома, которые находятся на стыке этих четвертей, соединяя их в единое целое.","note":""},"moonTime":{"title":"Лунная фаза","content":"В этой строке указана лунная фаза, на которую приходится данный лунный дом. В стандарте \"Шаманское Время\" лунный цикл делится на четыре фазы, но есть четыре особых лунных дома, которые находятся на стыке этих четвертей, соединяя их в единое целое.","note":""},"earthTime":{"title":"Время суток","content":"В этой строке указана время суток, на которую приходится данный земной дом. В стандарте \"Шаманское Время\" суточный цикл делится на четыре части, но есть четыре особых земных дома, которые находятся на стыке этих четвертей, соединяя их в единое целое.","note":""},"localInfo":{"title":"Активная локация","content":"В этой строке указана выбранная локация, относительно которой программа отображает природное время. Впрочем, следует учитывать, что на самом деле географические координаты влияют только на показания суточного колеса. Остальные природные циклы одинаковы для всех точек земного шара за вычетом местного времени.","note":""},"latInfo":{"title":"Выбранная широта","content":"Это выбранная широта наблюдения природных циклов. Напоминаем, что географическая широта влияет только на показания суточного \"Земного колеса\". Тем не менее, не стоит забывать об этом.","note":""},"lngInfo":{"title":"Выбранная долгота","content":"Это выбранная долгота наблюдения природных циклов. Напоминаем, что географическая долгота влияет только на показания суточного \"Земного колеса\". Тем не менее, не стоит забывать об этом.","note":""},"orbitalCulture":{"title":"Планетарная культура","content":"В этом разделе собрана информация о выбранном доме с точки зрения единой культуры всей нашей земной цивилизации. Всё, что может быть актуальным и полезным для проекта \"Шаманского времени\". Этот раздел можно настроить или выключить полностью в меню настроек. Чтобы узнать про планетарную культуру больше загляни в Мануал.","note":"(кликни по вкладке чтобы показать/скрыть информацию этого раздела)"},"lairDesc":{"title":"Описание дома","content":"Здесь приведено краткое общее описание выбранного шаманского дома. Его свойства и особенности, любопытные замечания, и так далее.","note":""},"holidays":{"title":"Праздники и церемонии","content":"Здесь размещено краткое описание праздников и церемоний, связанных с выбранным шаманским домом. Это могут быть как крупные мероприятия мирового масштаба, так и малоизвестные ритуалы и народные приметы, имеющие связь с этим особым временем.","note":"(кликни чтобы получить больше информации)"},"festivals":{"title":"Фестивали мира","content":"Здесь размещена информация о фестивалях мира, которые проводятся во время этого шаманского дома, либо имеют с ним мощную связь.","note":"(кликни чтобы получить больше информации)"},"ezoWorld":{"title":"Мир эзотерики","content":"Здесь размещена информация эзотерического характера, так или иначе связанная с этим шаманским домом. Шаманские силы, стихии природы, стороны света и прочее - всю эту информацию можно найти здесь. Этот раздел можно настроить или выключить полностью в меню настроек.","note":"(кликни чтобы получить больше информации)"},"spokeDesc":{"title":"Сторона света","content":"Каждый шаманский дом связан своей срединной спицей с конкретным направлением света. Здесь указано какое направление соответствует этому выбранному дома. Следует отметить, что система сторон света в данном проекте может значительно отличаться от подобных систем, описанных в других источниках.","note":"(кликни чтобы узнать больше про стороны и направления шаманского времени)"},"spokeElement":{"title":"Стихия природы","content":"Здесь указана стихия (или пара стихий), которая связана с выбранным шаманским домом и его природным временем. Следует отметить, что система стихий природы в данном проекте может значительно отличаться от подобных систем, описанных в других источниках.","note":"(кликни чтобы узнать больше про стихии шаманского времени)"},"spokePower":{"title":"Шаманская сила","content":"Каждый шаманский дом и всё его время управляется особой шаманской силой. Здесь указано какой именно силой управляются этот выбранный дом, а также приводится краткое описание этой силы.","note":"(кликни чтобы узнать больше про шаманские силы)"},"key":"ru","file":"ru_tips.json","packType":"tips"}
+]

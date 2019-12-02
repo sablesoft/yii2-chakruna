@@ -1,0 +1,352 @@
+/* custome style */
+html, body{
+	height: 100%;
+	min-width: 400px;
+	position: relative;
+	overflow-y: hidden;
+}
+
+body{
+	background: url(../../img/galaxy1920.jpg) 100% 100% repeat-y;
+	background-size: cover;
+}
+
+h1{
+	min-width: 400px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 32px;
+	color: #5CB85C;
+	text-shadow: 2px 2px 1px darkgreen;
+	margin: 10px auto 5px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~BOARD~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#board {
+	margin-top: 20px;
+}
+.caption-br{
+	padding-bottom: 20px;
+}
+.caption-xs-br{
+	padding-bottom: 5px;
+}
+.wheel-sm-br{
+	padding-bottom: 150px;
+	position: relative;
+}
+.wheel-xs-br{
+	padding-bottom: 200px;
+	position: relative;
+}
+#moon-anchor, #earth-anchor{
+	position: absolute;
+	bottom: 120px;
+}
+#moon-anchor-xs, #earth-anchor-xs{
+	position: absolute;
+	bottom: 95px;
+}
+#board .thumbnail{
+	position: relative;
+	width: 295px;
+	padding: 0;
+	border: none;
+	margin: 0 auto;
+	background: none;
+}
+#board .thumbnail>.caption{
+	width: 294px;
+	margin-top: 10px;
+}
+#board .thumbnail>img:first-child{
+	border: 2px solid lime;
+}
+
+/* ~~~~~~~~~~~~~~~  BEGIN -> стили для меток четвертей колёс ~~~~~~~ */
+
+.label-wheel {
+	position: absolute;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	text-shadow: 1px 1px 1px black;
+	width: 100px;
+	text-align: center;
+	z-index: 10;
+}
+.label-wheel-right {
+	right: 14%;
+	top: 46%;
+}
+.label-wheel-top {
+	top: 24%;
+	right: 36%;
+}
+.label-wheel-left {
+	left: 14%;
+	top: 46%;
+}
+.label-wheel-bottom {
+	right: 36%;
+	bottom: 24%;
+}
+
+/* ~~~~~~~~~~~~~~~  END -> стили для меток четвертей колёс ~~~~~~~ */
+
+.red {
+	/*border: 1px solid red;*/
+	background: #ED836A !important;
+}
+
+.white {
+	/*border: 1px solid white;*/
+	background: #C1C1C1 !important;
+}
+
+.blue {
+	/*border: 1px solid blue;*/
+	background: #6A95F0 !important;
+}
+
+.yellow {
+	/*border: 1px solid #FFE500;*/
+	background: #FFE35F !important;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~ BOARD BUTTONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#board .thunbnail>.caption>.btn-group {
+	z-index: 0 !important;
+}
+
+#board .thumbnail>.caption>.btn-group>.btn-lair{
+	text-shadow: 2px 2px 2px black;
+	color: white !important;
+	font-size: 15px;
+	font-weight: bold;
+}
+#board .thumbnail>.caption .btn-home{
+	width: 192px;
+}
+#board #btn-now, #board #btn-show, #board #btn-save{
+	position: absolute;
+	top: 45%;
+	left: 45%;
+	border-radius: 50px;
+	font-size: 16px;
+	z-index: 50;
+}
+
+#board .wheel {
+	position: relative;
+}
+.btn-power{
+	padding: 0;
+	border-radius: 50px;
+	background: transparent;
+	opacity: 0.5;
+	z-index: 30;
+}
+.btn-power:hover{
+	opacity: 1;
+	box-shadow: 0 0 30px 1px black;
+}
+
+.power-active {
+	opacity: 1 !important;
+	box-shadow: 0 0 2px 2px lime !important;
+}
+
+.power-focus {
+	opacity: 1;
+	box-shadow: 0 0 10px 7px white;
+}
+
+.house {
+	z-index: 40;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~ BOARD STAFF ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.staff {
+	opacity: 1;
+}
+
+.staff:hover {
+	box-shadow: 0 0 12px 5px white;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#form{
+	min-width: 400px;
+	position: fixed;
+	bottom: 0px;
+	margin: 0;
+	padding-top: 10px;
+	border-top: 2px solid #5CB85C;
+	color: white;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+body #ui-datepicker-div {
+	z-index: 50 !important;
+}
+#form .form-group{
+	margin-bottom: 8px;
+}
+.fixed-form-up{
+	padding-bottom: 40px;
+}
+.fixed-sm-form{
+	padding-bottom: 160px;
+}
+.fixed-xs-form{
+	padding-bottom: 178px;
+}
+.form-br{
+	padding-bottom: 8px;
+}
+
+input {
+	font-weight: bold;
+	color: black !important;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#xs-nav{
+	position: fixed;
+	bottom: 60px;
+	left: 30px;
+}
+#xs-menu{
+	position: fixed;
+	bottom: 40px;
+	right: 20px;
+}
+#sm-nav{
+	position: fixed;
+	top: 220px;
+	left: 150px;
+}
+#sm-menu{
+	position: fixed;
+	top: 205px;
+	right: 150px;
+}
+
+/*#options{
+	position: fixed;
+	top: 12px;
+	right: 20px;
+}*/
+
+/*	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SPOKE INFO MODAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	*/
+
+#spokeInfo .panel-group {
+	margin: 0;
+}
+#spokeInfo .panel-body {
+	padding: 10px;
+}
+#spokeInfo .modal-header{
+    text-align: center;
+    font-weight: bolder !important;
+    color: green;
+    font-size: 20px;
+}
+#spokeInfo .spokeImg{
+    float: left;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    margin-left: 85px;
+}
+#spokeInfo .spokeImg img{
+    width: 160%;
+    height: 160%;
+}
+
+#spokeInfo a{
+    text-decoration: none;
+    cursor: pointer;
+}
+#spokeInfo #spokeAccordion ul li{
+    line-height: 26px;
+}
+#spokeInfo #spokeAccordion ul {
+    list-style-type: none;
+    position: relative;
+    padding-left: 10px;
+    margin: 0;
+}
+#spokeInfo .panel-title{
+    font-weight: bold;
+}
+#spokeInfo #modal-btn-show {
+    position: absolute !important;
+    right: -4px;
+    top: -4px;
+}
+#spokeInfo .lairQuote{
+    width: 75%;
+    float: right;
+    margin-bottom: 14px;
+}
+#spokeInfo .lairQuote p {
+    margin: 0;
+    margin-right: 12px;
+    margin-top: 5px;
+}
+#spokeInfo .quoteText {
+	font-style: italic;
+	font-size: 12px;
+	/*text-align: right;*/
+}
+#spokeInfo .quoteSource {
+	text-align: right;
+	font-weight: bold;
+	font-size: 13px;
+	/*color: maroon;*/
+}
+#spokeInfo .lairDesc {
+    line-height: 16px;
+    padding: 0;
+    margin: 0;
+    /*padding-bottom: 8px;*/
+}
+#spokeInfo .lairInfo p {
+    margin: 0;
+    font-style: italic;
+}
+#spokeInfo .infoLabel {
+    color: green;
+    font-weight: bold;
+    margin-left: 14px;
+    margin-right: -14px;
+}
+#spokeInfo .inlineInfo {
+    display: inline;
+    float: right;
+    color: black;
+    font-style: italic;
+    padding-right: 50px;
+}
+#spokeInfo #orbitalAccordion .panel-heading{
+	background: lightgreen;
+}
+
+/* ======================= TOUR STYLES ====================*/
+*[class*="tour-"]{
+	box-shadow: 0 0 10px 7px lime;
+	opacity: 1;
+}
+
+.popover[class*="tour-"] .popover-title{
+	background: #71E827;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+}

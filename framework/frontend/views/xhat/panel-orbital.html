@@ -1,0 +1,55 @@
+<div class="panel panel-default">
+    <div class="panel-heading spoke-heading">
+        <p class="panel-title">
+            <a data-toggle="collapse" data-parent="#spokeAccordion"
+                class="tip" data-tip="orbitalCulture" href="#callTwo">
+                {{orbitalCulture}}
+            </a>
+        </p>
+    </div>
+    <div id="callTwo" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="panel-group" id="orbitalAccordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a id="label-lairDesc" data-toggle="collapse" class="tip"
+                        data-parent="#orbitalAccordion" data-tip="lairDesc" href="#orbitalOne"> </a>
+                  </h4>
+                </div>
+                <div id="orbitalOne" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <p class="lairDesc tip" data-tip="lairDesc">{{lairDesc}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a id="label-holidays" data-toggle="collapse" class="tip" 
+                        data-parent="#orbitalAccordion" href="#orbitalTwo"> </a>
+                  </h4>
+                </div>
+                <div id="orbitalTwo" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p class="lairDesc tip" data-tip="holidays">{{lairHolidays}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a id="label-festivals" class="tip" data-toggle="collapse"
+                        data-parent="#orbitalAccordion" href="#orbitalThree"> </a>
+                  </h4>
+                </div>
+                <div id="orbitalThree" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p class="lairDesc tip" data-tip="festivals">{{lairFestivals}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

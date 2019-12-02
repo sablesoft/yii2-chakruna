@@ -1,0 +1,12 @@
+{{#each custom}}
+<li><a class='customBox tip' data-key="{{key}}"
+        data-tip='box-custom' href="#">{{name}}</a></li>
+{{/each}}
+<li class="divider"></li>
+<li><a class='active defaultBox tip' data-key="{{defaultKey}}" 
+        data-tip="box-default" href="#">{{defaultName}}</a></li>
+<li class="divider"></li>
+<li><a id="label-editBox" class='tip' data-key="editBox" 
+        data-tip="editBox" href="#"> </a></li>
+<li><a id="label-addBox" class='tip' data-key="addBox" 
+        data-tip="addBox" href="#"> </a></li>

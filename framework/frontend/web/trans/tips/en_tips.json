@@ -1,0 +1,129 @@
+{"mainTitle":
+	{
+		"title":"Shamanic Time",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam earum tenetur error optio obcaecati odio possimus dolorem...",
+		"note":"(this is lorem fish)"
+	},
+"lang":
+	{
+		"title":"Languege Menu",
+		"content":"This is menu of languege change",
+		"note":"(click for change your languege)"
+	},
+"lang-change":
+	{
+		"title":"Languege for change",
+		"content":"This is one of available languege for change",
+		"note":"(click for change this languege)",
+		"key":"lang-change",
+		"lang":"en"
+	},
+"editLang":
+	{
+		"title":"Edit current languege",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sunt earum deserunt beatae veniam laborum architecto culpa, reiciendis dicta quam, iusto et nesciunt. Quaerat saepe consectetur esse similique deleniti eveniet!",
+		"note":"(under development)",
+		"key":"editLang",
+		"lang":"en"
+	},
+"addLang":
+	{
+		"title":"Append new languege",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sunt earum deserunt beatae veniam laborum architecto culpa, reiciendis dicta quam, iusto et nesciunt. Quaerat saepe consectetur esse similique deleniti eveniet!",
+		"note":"(under development)",
+		"key":"addLang",
+		"lang":"en"
+	},
+"boxes":
+	{
+		"title":"Current box change",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ad laudantium, debitis vero maiores quo dolor accusamus blanditiis hic natus optio incidunt, veritatis dolores eum tempora fugit corporis ipsum consequatur.",
+		"note":"(click for change current box)"
+	},
+"editBox":
+	{
+		"title":"Edit current box",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sunt earum deserunt beatae veniam laborum architecto culpa, reiciendis dicta quam, iusto et nesciunt. Quaerat saepe consectetur esse similique deleniti eveniet!",
+		"note":"(under development)",
+		"key":"editBox",
+		"lang":"en"
+	},
+"addBox":
+	{
+		"title":"Append new box",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sunt earum deserunt beatae veniam laborum architecto culpa, reiciendis dicta quam, iusto et nesciunt. Quaerat saepe consectetur esse similique deleniti eveniet!",
+		"note":"(under development)",
+		"key":"addBox",
+		"lang":"en"
+	},
+"box-default":
+	{
+		"title":"Default box",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ad laudantium, debitis vero maiores quo dolor accusamus blanditiis hic natus optio incidunt, veritatis dolores eum tempora fugit corporis ipsum consequatur.",
+		"note":"(click for change default box for current languege)",
+		"key":"box-default",
+		"lang":"en"
+	},
+"box-custom":
+	{
+		"title":"Custom box",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ad laudantium, debitis vero maiores quo dolor accusamus blanditiis hic natus optio incidunt, veritatis dolores eum tempora fugit corporis ipsum consequatur.",
+		"note":"(click for change this box for current languege)",
+		"key":"box-custom",
+		"lang":"en"
+	},
+"options":
+	{
+		"title":"Application options",
+		"content":"This is menu of application options",
+		"note":"(click for change options)"
+	},
+"anima":
+	{
+		"title":"Animation Option",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates impedit dolorum earum aliquid ullam, harum sit fuga cumque, quasi iusto quaerat delectus ad quae et natus voluptate voluptas debitis nostrum.",
+		"note":"(click for toggle animation show)",
+		"key":"anima",
+		"lang":"en"
+	},
+"tips":
+	{
+		"title":"Tooltips Option",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates impedit dolorum earum aliquid ullam, harum sit fuga cumque, quasi iusto quaerat delectus ad quae et natus voluptate voluptas debitis nostrum.",
+		"note":"(click for toggle tooltips show)",
+		"key":"tips",
+		"lang":"en"
+	},
+"quotes":
+	{
+		"title":"Availables Quotes",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates impedit dolorum earum aliquid ullam, harum sit fuga cumque, quasi iusto quaerat delectus ad quae et natus voluptate voluptas debitis nostrum.",
+		"note":"(click for toggle tooltips show)"
+	},
+"manual":
+	{
+		"title":"All manuals",
+		"content":"This is menu of all availibles teaching and esoteric manuals about this application",
+		"note":"(click for change manual)"
+	},
+"tour":
+	{
+		"title":"Educational Tour",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, accusantium. Cupiditate necessitatibus ab nemo commodi quod unde, facere doloribus. Necessitatibus excepturi corrupti quae ab rem, eveniet perferendis dolor deserunt consequuntur!",
+		"note":"(click for start this tour)",
+		"key":"tour",
+		"lang":"en"
+	},
+"editTour":
+	{
+		"title":"Edit Tours",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda asperiores molestiae sequi obcaecati harum omnis consectetur esse illum quisquam! Fuga nesciunt tempore officiis expedita, earum vitae, deserunt itaque quam!",
+		"note":"(under development)"
+	},
+"addTour":
+	{
+		"title":"Add New Tour",
+		"content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda asperiores molestiae sequi obcaecati harum omnis consectetur esse illum quisquam! Fuga nesciunt tempore officiis expedita, earum vitae, deserunt itaque quam!",
+		"note":"(under development)"
+	},
+"btn-menu":{"title":"Open Menu","content":"This button open application menu.","note":"(click for open menu)"},"btn-now":{"title":"Present time","content":"This button spooling wheels in moment of present time and set clock on.","note":"(click for spooling to present time)"},"btn-show":{"title":"Show time","content":"This button spooling wheels in custom moment of time and set clock off.","note":"(click for spooling to custom time)"},"btn-save":{"title":"Save button","content":"This button save chosen location...","note":"(click for save location)"},"btn-up":{"title":"Wheel Scroller Up","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quos aliquam recusandae similique dolorem ullam, praesentium dolores dolore quae est facere, odit cum voluptatem repellat accusantium laborum iusto eaque. Eius.","note":"(click for scroll to previus wheel)"},"btn-down":{"title":"Wheel Scroller Down","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas enim dolor, quos pariatur impedit mollitia iusto ducimus consequatur reprehenderit commodi harum amet. Quaerat explicabo, similique fuga reiciendis perferendis earum rerum.","note":"(click for scroll to next wheel)"},"date":{"title":"Current date","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus. Explicabo, minima, quibusdam!","note":"(change date in this input)","key":"date","lang":"en"},"time":{"title":"Current time","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(change time in this input)"},"localList":{"title":"Current location","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(change location in this select)","key":"localList","lang":"en"},"gps":{"title":"GPS","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(input latitude and longitude)","key":"gps","lang":"en"},"lat":{"title":"Latitude","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(input latitude if as needed)"},"lng":{"title":"Longitude","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus..","note":"(input longitude if as needed)"},"sun-spoke":{"title":"Spoke of Sun Wheel","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info, double click for move show moment)","key":"sun-spoke","lang":"en"},"moon-spoke":{"title":"Spoke of Moon Wheel","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info, double click for move show moment)","key":"moon-spoke","lang":"en"},"earth-spoke":{"title":"Spoke of Earth Wheel","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info, double click for move show moment)","key":"earth-spoke","lang":"en"},"spring":{"title":"Spring quarter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"spring-summer":{"title":"Between spring and summer","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"summer":{"title":"Summer quarter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"summer-autumn":{"title":"Between summer and autumn","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"autumn":{"title":"Autumn quarter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"autumn-winter":{"title":"Between autumn and winter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"winter":{"title":"Winter quarter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"winter-spring":{"title":"Between winter and spring","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"growing":{"title":"Growing Moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"growing-full":{"title":"Between growing and full moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"full":{"title":"Full Moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"full-waning":{"title":"Between full and waning moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"waning":{"title":"Waning Moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"waning-new":{"title":"Between waning and new moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"new":{"title":"New Moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"new-growing":{"title":"Between new and groing moon","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"morning":{"title":"Morning","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"morning-day":{"title":"Between sunrise and midday","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"day":{"title":"Day","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"day-evening":{"title":"Between midday and sunset","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"evening":{"title":"Evening","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"evening-night":{"title":"Between sunset and midnight","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"night":{"title":"Night","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"","key":"night","lang":"en"},"night-morning":{"title":"Between midnight and sunrise","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"staffsun":{"title":"Sun running moment","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(use spokes, form or buttons for change another running moment)"},"staffmoon":{"title":"Moon running moment","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(use spokes, form or buttons for change another running moment)"},"staffearth":{"title":"Earth running moment","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(use spokes, form or buttons for change another running moment)"},"earth-next":{"title":"Spooler Next","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for next solar day)"},"earth-lair":{"title":"Earth Lair","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for change current lair pike moment)"},"earth-prev":{"title":"Spooler Previus","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for previus solar day)"},"moon-next":{"title":"Spooler Next","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for next moon cycle)"},"moon-lair":{"title":"Moon Lair","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for change current moon lair pike moment)","key":"moon-lair","lang":"en"},"moon-prev":{"title":"Spooler Previus","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for previus moon cylce)"},"sun-next":{"title":"Spooler Next","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for next sun-year cycle)"},"sun-lair":{"title":"Sun Lair","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for change current sun lair pike moment)"},"sun-prev":{"title":"Spooler Previus","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for previus solar-year cylce)"},"lairTitle":{"title":"Shamanic Lair","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"spokeImg":{"title":"Spoke Image","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"lairQuote":{"title":"Tematic Quote","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"lairPike":{"title":"Pike of showing lair","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for spooling time to this lair pike)"},"sunTime":{"title":"Sun Phase","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"moonTime":{"title":"Moon Phase","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"earthTime":{"title":"Earth Phase","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"localInfo":{"title":"Current Lacation","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"latInfo":{"title":"Current latitude","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"lngInfo":{"title":"Current longitude","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"orbitalCulture":{"title":"Unity Culture","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"lairDesc":{"title":"Lair Description","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"holidays":{"title":"Lair Holidays and Ceremonies","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":""},"festivals":{"title":"World Festivals","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"ezoWorld":{"title":"Ezoteric World","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"spokeDesc":{"title":"World quarter","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"spokeElement":{"title":"Nature Element","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"spokePower":{"title":"Shamanic Power","content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, deserunt totam cumque, similique et, itaque recusandae quidem voluptatem placeat modi commodi ut quas animi praesentium nam delectus.","note":"(click for more info)"},"key":"en","file":"en_tips.json","packType":"tips"}

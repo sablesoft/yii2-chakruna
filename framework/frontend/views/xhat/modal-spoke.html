@@ -1,0 +1,69 @@
+<div id="spokeInfo" class="modal fade">
+     <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                 <p class="modal-title tip" data-tip="lairTitle">{{lairTitle}}</p>
+             </div>                 
+             <div class="modal-body">
+                <div class="spokeImg">
+                    <img class="tip" data-tip="spokeImg" src="{{imgSrc}}" alt="{{imgAlt}}">
+                </div>
+                <div class="lairQuote tip" data-tip="lairQuote">
+                    <p class="quoteText">{{quoteText}}</p>
+                    <p class='quoteSource'>{{quoteSource}}</p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="panel-group" id="spokeAccordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading spoke-heading">
+                            <p class="panel-title">
+                                <a data-toggle="collapse" data-parent="#spokeAccordion" 
+                                    class="tip" data-tip="mainTitle" href="#callOne">
+                                    {{mainTitle}}
+                                </a>
+                            </p>
+                        </div>
+                        <div id="callOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <ul class="lairInfo">
+                                    <li>
+                                        <a id="label-lairPike" href="#" class="infoLabel tip"
+                                            data-tip="lairPike"> </a>
+                                        <span class="infoLabel tip" data-tip="lairPike">
+                                            {{lairDuration}}
+                                        </span>
+                                        <span class="inlineInfo tip" data-tip="lairPike">{{lairPike}}</span>
+                                        <div id='modal-btn-show' data-tip="btn-show" 
+                                            class="btn btn-show btn-info tip">
+                                            <i class="glyphicon glyphicon-sunglasses"></i>
+                                        </div>                                               
+                                    </li>
+                                    <li>
+                                        <a id="label-{{wheelTime}}" href="#" class="infoLabel tip"
+                                            data-tip="{{wheelTime}}"> </a>
+                                        <a id="label-{{currWheelTime}}" href="#" 
+                                            class="inlineInfo tip"
+                                            data-tip="{{currWheelTime}}"> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="infoLabel tip" 
+                                            data-tip="localInfo">{{local}} </a>
+                                        <p class="inlineInfo">
+                                            <span class="tip" 
+                                                data-tip="localInfo">{{localName}}</span> ( 
+                                            <span class="tip" 
+                                                data-tip="latInfo">{{localLat}}</span> /
+                                            <span class="tip" 
+                                                data-tip="lngInfo">{{localLng}}</span>)
+                                        </p> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+     </div>
+</div>

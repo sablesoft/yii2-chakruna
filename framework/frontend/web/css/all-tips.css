@@ -1,0 +1,41 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~ BOARD TOOLTIPS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#tipi{
+	z-index: 2015;
+}
+.tip-body {
+	display: none;
+	position: fixed;
+	z-index: 2015;
+	width: 300px;
+	padding: 6px 10px;
+	font-family: 'Times New Roman';
+	text-align: left;
+	font-size: 15px;
+	font-weight: normal;
+	text-transform: none;
+	line-height: 15px;
+	color: white;
+	box-shadow: 0 1px 3px #C4C4C4;
+	border: 1px solid #DBB779;
+	border-radius: 5px;
+	background: black;
+	opacity: 0.9;
+}
+.tip-title {
+	margin: 0;
+	font-weight: bold;
+	font-size: 17px;
+	text-align: center;
+	color: lime;
+}
+.tip-content {
+	margin: 5px 0;
+}
+.tip-note {
+	text-align: right;
+	font-style: italic;
+	font-size: 13px;
+	margin: 0;
+	color: gold;
+}
