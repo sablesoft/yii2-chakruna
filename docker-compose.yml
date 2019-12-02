@@ -21,7 +21,7 @@ services:
     container_name: chakrunadb
     volumes:
       - ./log:/var/log/mysql
-      - docker/dump:/dump
+      - ./docker/dump:/dump
     env_file:
       - .env
     ports:
