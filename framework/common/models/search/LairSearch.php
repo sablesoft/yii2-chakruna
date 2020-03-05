@@ -22,6 +22,36 @@ class LairSearch extends Lair
         ];
     }
 
+    public function getColumns(): array
+    {
+        return [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+            'lang_id',
+            'cycle_id',
+            'spoke_id',
+            [
+                'attribute' => 'icon_id',
+                'value' => function( $model ) {
+                    /** @var Lair $model */
+                    return $model->imagePath;
+                },
+                'format' => 'image',
+                'enableSorting' => false,
+                'filter' => false
+            ],
+            'name',
+            'period',
+            //'desc:ntext',
+            //'owner_id',
+            //'created_at',
+            //'updated_at',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */

@@ -23,6 +23,36 @@ class ElementSearch extends Element
     }
 
     /**
+     * @return array
+     */
+    public function getColumns(): array
+    {
+        return [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+            'lang_id',
+            [
+                'attribute' => 'icon_id',
+                'value' => function( $model ) {
+                    /** @var Element $model */
+                    return $model->imagePath;
+                },
+                'format' => 'image',
+                'enableSorting' => false,
+                'filter' => false
+            ],
+            'name',
+            'desc:ntext',
+            //'owner_id',
+            //'created_at',
+            //'updated_at',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function scenarios()

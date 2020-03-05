@@ -3,7 +3,6 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-use common\models\Element;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\search\ElementSearch */
@@ -26,29 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'lang_id',
-            [
-                'attribute' => 'icon_id',
-                'value' => function( $model ) {
-                    /** @var Element $model */
-                    return $model->imagePath;
-                },
-                'format' => 'image',
-                'enableSorting' => false,
-                'filter' => false
-            ],
-            'name',
-            'desc:ntext',
-            //'owner_id',
-            //'created_at',
-            //'updated_at',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
+        'columns' => $searchModel->columns,
     ]); ?>
 
     <?php Pjax::end(); ?>

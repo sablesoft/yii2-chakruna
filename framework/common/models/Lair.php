@@ -62,6 +62,23 @@ class Lair extends CrudModel
         ];
     }
 
+    public function getColumns(): array
+    {
+        return [
+            'id',
+            'lang_id',
+            'cycle_id',
+            'spoke_id',
+            'imagePath:image',
+            'name',
+            'period',
+            'desc:ntext',
+            'owner_id',
+            'created_at:datetime',
+            'updated_at:datetime',
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -69,7 +86,7 @@ class Lair extends CrudModel
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'lang_id' => Yii::t('app', 'Lang ID'),
+            'lang_id' => Yii::t('app', 'Language'),
             'cycle_id' => Yii::t('app', 'Cycle ID'),
             'spoke_id' => Yii::t('app', 'Spoke ID'),
             'icon_id' => Yii::t('app', 'Icon'),

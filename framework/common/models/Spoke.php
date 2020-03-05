@@ -61,13 +61,32 @@ class Spoke extends CrudModel
     }
 
     /**
+     * @return array
+     */
+    public function getColumns(): array
+    {
+        return [
+            'id',
+            'lang_id',
+            'element_id',
+            'imagePath:image',
+            'name',
+            'direction',
+            'desc:ntext',
+            'owner_id',
+            'created_at:datetime',
+            'updated_at:datetime',
+        ];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function attributeLabels()
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'lang_id' => Yii::t('app', 'Lang ID'),
+            'lang_id' => Yii::t('app', 'Language'),
             'element_id' => Yii::t('app', 'Element ID'),
             'icon_id' => Yii::t('app', 'Icon'),
             'imagePath' => Yii::t('app', 'Icon'),

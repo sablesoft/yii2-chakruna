@@ -53,6 +53,20 @@ class Element extends CrudModel
         ];
     }
 
+    public function getColumns(): array
+    {
+        return [
+            'id',
+            'lang_id',
+            'imagePath:image',
+            'name',
+            'desc:ntext',
+            'owner_id',
+            'created_at:datetime',
+            'updated_at:datetime',
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -60,7 +74,7 @@ class Element extends CrudModel
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'lang_id' => Yii::t('app', 'Lang ID'),
+            'lang_id' => Yii::t('app', 'Language'),
             'icon_id' => Yii::t('app', 'Icon'),
             'imagePath' => Yii::t('app', 'Icon'),
             'name' => Yii::t('app', 'Name'),

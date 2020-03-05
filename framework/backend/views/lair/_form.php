@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use common\models\Language;
 use noam148\imagemanager\components\ImageManagerInputWidget;
 
 /* @var $this yii\web\View */
@@ -13,7 +14,10 @@ use noam148\imagemanager\components\ImageManagerInputWidget;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'lang_id')->textInput() ?>
+    <?= $form->field($model, 'lang_id')->dropDownList(
+        ...Language::getDropDownList([
+        'prompt' => Yii::t('app', 'Select language')
+    ])); ?>
 
     <?= $form->field($model, 'cycle_id')->textInput() ?>
 
