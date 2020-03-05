@@ -28,6 +28,19 @@ class Spoke extends CrudModel
     }
 
     /**
+     * @return array
+     */
+    public function getCodes(): array
+    {
+        return [
+            'e', 'ene', 'en', 'nne',
+            'n', 'nnw', 'nw', 'wnw',
+            'w', 'wsw', 'ws', 'ssw',
+            's', 'sse', 'se', 'ese'
+        ];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function rules()

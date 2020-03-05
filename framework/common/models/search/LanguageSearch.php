@@ -31,7 +31,14 @@ class LanguageSearch extends Language
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
-            'code',
+            [
+                'attribute' => 'code',
+                'value' => function ($model) {
+                    /** @var Language $model */
+                    return $model->code;
+                },
+                'filter' => $this->codesFilter
+            ],
             'name',
             'native_name',
 //            [

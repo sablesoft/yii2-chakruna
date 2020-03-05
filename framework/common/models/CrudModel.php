@@ -34,6 +34,8 @@ use common\behavior\DateFilterBehavior;
  * @property Language|null $lang
  * @property string $langLabel
  * @property array $columns
+ * @property array $codes
+ * @property array $codesFilter
  *
  * @method ActiveQuery|LanguageQuery getLang();
  * @method string getLangLabel();
@@ -61,6 +63,27 @@ abstract class CrudModel extends ActiveRecord {
     public function getColumns() : array
     {
         return [];
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getCodes() : array
+    {
+        return [];
+    }
+
+    /**
+     * @return array
+     */
+    public function getCodesFilter() : array
+    {
+        $filter = [];
+        foreach( $this->getCodes() as $code ) {
+            $filter[$code] = $code;
+        }
+
+        return $filter;
     }
 
     /**

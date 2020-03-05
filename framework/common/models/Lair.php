@@ -31,6 +31,27 @@ class Lair extends CrudModel
     }
 
     /**
+     * @return array
+     */
+    public function getCodes(): array
+    {
+        return [
+            'earth-e', 'earth-ene', 'earth-en', 'earth-nne',
+            'earth-n', 'earth-nnw', 'earth-nw', 'earth-wnw',
+            'earth-w', 'earth-wsw', 'earth-ws', 'earth-ssw',
+            'earth-s', 'earth-sse', 'earth-se', 'earth-ese',
+            'moon-e', 'moon-ene', 'moon-en', 'moon-nne',
+            'moon-n', 'moon-nnw', 'moon-nw', 'moon-wnw',
+            'moon-w', 'moon-wsw', 'moon-ws', 'moon-ssw',
+            'moon-s', 'moon-sse', 'moon-se', 'moon-ese',
+            'sun-e', 'sun-ene', 'sun-en', 'sun-nne',
+            'sun-n', 'sun-nnw', 'sun-nw', 'sun-wnw',
+            'sun-w', 'sun-wsw', 'sun-ws', 'sun-ssw',
+            'sun-s', 'sun-sse', 'sun-se', 'sun-ese'
+        ];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function rules()

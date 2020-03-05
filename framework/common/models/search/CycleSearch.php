@@ -4,7 +4,6 @@ namespace common\models\search;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\User;
 use common\models\Cycle;
 use common\models\Language;
 
@@ -30,14 +29,21 @@ class CycleSearch extends Cycle
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
-            'code',
+            [
+                'attribute' => 'code',
+                'value' => function ($model) {
+                    /** @var Cycle $model */
+                    return $model->code;
+                },
+                'filter' => $this->codesFilter
+            ],
             [
                 'attribute' => 'lang_id',
                 'value' => function ($model) {
                     /** @var Cycle $model */
                     return $model->langLabel;
                 },
-                'filter' => Language::getDropDownList()[0]
+                'filter' => Language::getDropDownList(['to' => 'native_name'])[0]
             ],
             [
                 'attribute' => 'icon_id',

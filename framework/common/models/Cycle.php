@@ -22,6 +22,18 @@ class Cycle extends CrudModel
     }
 
     /**
+     * Hardcore cycles codes
+     *
+     * @return array
+     */
+    public function getCodes() : array
+    {
+        return [
+            'earth', 'moon', 'sun'
+        ];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function rules()

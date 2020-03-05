@@ -35,6 +35,6 @@ class LangBehavior extends Behavior
     public function getLangLabel() : string
     {
         $lang = $this->getLang()->one();
-        return $lang ? $lang->name : '';
+        return $lang ? $lang->native_name : '';
     }
 }

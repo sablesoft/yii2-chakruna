@@ -37,11 +37,12 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Cycles', 'url' => ['/cycle/index']],
-        ['label' => 'Elements', 'url' => ['/element/index']],
-        ['label' => 'Spokes', 'url' => ['/spoke/index']],
-        ['label' => 'Lairs', 'url' => ['/lair/index']]
+        ['label' => Yii::t('app','Home'), 'url' => ['/site/index']],
+        ['label' => Yii::t('app','Languages'), 'url' => ['/language/index']],
+        ['label' => Yii::t('app','Cycles'), 'url' => ['/cycle/index']],
+        ['label' => Yii::t('app','Elements'), 'url' => ['/element/index']],
+        ['label' => Yii::t('app','Spokes'), 'url' => ['/spoke/index']],
+        ['label' => Yii::t('app','Lairs'), 'url' => ['/lair/index']]
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

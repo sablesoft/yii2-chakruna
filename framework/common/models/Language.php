@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 use common\models\query\LairQuery;
 use common\models\query\SpokeQuery;
 use common\models\query\CycleQuery;
@@ -27,6 +28,14 @@ class Language extends CrudModel
     public static function tableName()
     {
         return 'language';
+    }
+
+    /**
+     * @return array
+     */
+    public function getCodes(): array
+    {
+        return ArrayHelper::getColumn(static::find()->select('code')->all(), 'code');
     }
 
     /**

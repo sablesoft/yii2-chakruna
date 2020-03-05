@@ -30,7 +30,14 @@ class SpokeSearch extends Spoke
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
-            'code',
+            [
+                'attribute' => 'code',
+                'value' => function ($model) {
+                    /** @var Spoke $model */
+                    return $model->code;
+                },
+                'filter' => $this->codesFilter
+            ],
             [
                 'attribute' => 'lang_id',
                 'value' => function ($model) {

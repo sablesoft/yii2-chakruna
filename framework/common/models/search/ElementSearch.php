@@ -33,7 +33,14 @@ class ElementSearch extends Element
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
-            'code',
+            [
+                'attribute' => 'code',
+                'value' => function ($model) {
+                    /** @var Element $model */
+                    return $model->code;
+                },
+                'filter' => $this->codesFilter
+            ],
             [
                 'attribute' => 'lang_id',
                 'value' => function ($model) {
