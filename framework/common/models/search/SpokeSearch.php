@@ -112,7 +112,6 @@ class SpokeSearch extends Spoke
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'code' => $this->code,
             'lang_id' => $this->lang_id,
             'element_id' => $this->element_id,
             'icon_id' => $this->icon_id,
@@ -123,6 +122,7 @@ class SpokeSearch extends Spoke
         $query = $this->applyDateFilter( 'updated_at', $query );
 
         $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'code', $this->code])
             ->andFilterWhere(['like', 'direction', $this->direction])
             ->andFilterWhere(['like', 'desc', $this->desc]);
 

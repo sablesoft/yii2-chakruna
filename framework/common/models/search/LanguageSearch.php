@@ -86,7 +86,6 @@ class LanguageSearch extends Language
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'code' => $this->code,
             'owner_id' => $this->owner_id
         ]);
 
@@ -94,6 +93,7 @@ class LanguageSearch extends Language
         $query = $this->applyDateFilter( 'updated_at', $query );
 
         $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'code', $this->code])
             ->andFilterWhere(['like', 'native_name', $this->native_name]);
 
         return $dataProvider;

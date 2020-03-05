@@ -115,6 +115,7 @@ class ElementSearch extends Element
         $query = $this->applyDateFilter( 'updated_at', $query );
 
         $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'code', $this->code])
             ->andFilterWhere(['like', 'desc', $this->desc]);
 
         return $dataProvider;

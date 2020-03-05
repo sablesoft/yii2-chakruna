@@ -121,7 +121,6 @@ class LairSearch extends Lair
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'code' => $this->code,
             'lang_id' => $this->lang_id,
             'cycle_id' => $this->cycle_id,
             'spoke_id' => $this->spoke_id,
@@ -134,6 +133,7 @@ class LairSearch extends Lair
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'period', $this->period])
+            ->andFilterWhere(['like', 'code', $this->code])
             ->andFilterWhere(['like', 'desc', $this->desc]);
 
         return $dataProvider;
