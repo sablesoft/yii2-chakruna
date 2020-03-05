@@ -14,7 +14,12 @@ use noam148\imagemanager\components\ImageManagerInputWidget;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
+    <?php // code field: ?>
+    <?php if(Yii::$app->controller->action->id == 'create'): ?>
+        <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
+    <?php else: ?>
+        <?= $form->field($model, 'code')->textInput(['maxlength' => true, 'disabled' => 'disabled']) ?>
+    <?php endif; ?>
 
     <?php if( \Yii::$app->user->can('admin')): ?>
         <?= $form->field($model, 'lang_id')->dropDownList(
