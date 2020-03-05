@@ -1,6 +1,6 @@
 <?php
 return [
-    'id' => 'docker-backend-tests',
+    'id' => 'chakruna-backend-tests',
     'components' => [
         'assetManager' => [
             'basePath' => __DIR__ . '/../web/assets',

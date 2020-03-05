@@ -19,11 +19,13 @@
 return [
     'Home' => 'Домой',
     'Login' => 'Логин',
+    'Logout' => 'Выход',
     'Powered by' => 'Создано',
     'Are you sure you want to delete this item?' => 'Вы уверены что хотите удалить этот элемент?',
     'Cannot delete default!' => 'Невозможно удалить элемент по умолчанию!',
     'Choose your language' => 'Выберите ваш язык',
     'Code' => 'Код',
+    'Сhakruna' => 'Чакруна',
     'Create Cycle' => 'Создать цикл',
     'Create Element' => 'Создать стихию',
     'Create Lair' => 'Создать дом',

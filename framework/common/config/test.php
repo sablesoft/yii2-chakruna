@@ -1,6 +1,6 @@
 <?php
 return [
-    'id' => 'docker-common-tests',
+    'id' => 'chakruna-common-tests',
     'basePath' => dirname(__DIR__),
     'components' => [
         'user' => [

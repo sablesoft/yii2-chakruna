@@ -17,6 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Logout' => 'Выход',
     ' and ' => '',
     '"{attribute}" does not support operator "{operator}".' => '',
     '(not set)' => '',
@@ -28,7 +29,7 @@ return [
     'Delete' => '',
     'Error' => '',
     'File upload failed.' => '',
-    'Home' => '',
+    'Home' => 'Домой',
     'Invalid data received for parameter "{param}".' => '',
     'Login Required' => '',
     'Missing required arguments: {params}' => '',

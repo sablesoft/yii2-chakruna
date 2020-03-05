@@ -112,7 +112,7 @@ class SiteController extends Controller {
      */
     public function actionLogin() {
         $this->view->title = Yii::t('app', 'Login');
-        $this->view->params['breadcrumbs'][] = $this->view->title;
+        $this->view->params['breadcrumbs'][] = Yii::t('app', $this->view->title);
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }

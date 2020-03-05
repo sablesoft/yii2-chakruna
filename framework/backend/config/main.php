@@ -7,7 +7,7 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'docker-backend',
+    'id' => 'chakruna-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],

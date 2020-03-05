@@ -78,7 +78,14 @@ class ElementSearch extends Element
             'created_at:datetime',
             'updated_at:datetime',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'visibleButtons' => [
+                    'view' => true,
+                    'edit' => true,
+                    'delete' => \Yii::$app->user->can('admin')
+                ]
+            ]
         ]);
     }
 
