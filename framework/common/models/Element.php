@@ -41,7 +41,7 @@ class Element extends CrudModel
             [['lang_id', 'name', 'code'], 'required'],
             [['lang_id', 'icon_id', 'owner_id'], 'integer'],
             [['desc'], 'string'],
-            [['code'], 'match', 'pattern' => '/^[a-z]\-+$/', 'message' => 'Code can only contain little latin characters'],
+            [['code'], 'match', 'pattern' => '/^[a-z-]/', 'message' => 'Code can only contain little latin characters'],
             [['created_at', 'updated_at'], 'safe'],
             [['name'], 'string', 'max' => 20],
             [['code'], 'string', 'max' => 10],
