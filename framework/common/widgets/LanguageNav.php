@@ -3,6 +3,7 @@ namespace common\widgets;
 
 use Yii;
 use common\models\Language;
+use yii\db\Exception;
 
 /**
  * Class LanguageNav
@@ -76,7 +77,12 @@ class LanguageNav extends \yii\bootstrap\Nav {
      */
     public static function label( string $code ) {
         if (self::$_labels === null) {
-            self::$_labels = Language::getDropDownList(['from'=> 'code', 'to'=> 'native_name'])[0];
+            try {
+                self::$_labels = Language::getDropDownList(['from'=> 'code', 'to'=> 'native_name'])[0];
+            } catch ( Exception $e ) {
+                Yii::error($e->getMessage(),'lang');
+                self::$_labels = ['en' => 'English'];
+            }
         }
 
         return isset(self::$_labels[$code]) ? self::$_labels[$code] : null;
