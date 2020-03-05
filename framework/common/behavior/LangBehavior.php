@@ -22,11 +22,16 @@ class LangBehavior extends Behavior
     /**
      * Gets query for [[Lang]].
      *
-     * @return ActiveQuery|LanguageQuery
+     * @return ActiveQuery|LanguageQuery|null
      */
     public function getLang()
     {
-        return $this->owner->hasOne(Language::class, ['id' => $this->langField]);
+        try {
+            return $this->owner->hasOne(Language::class, ['id' => $this->langField]);
+        } catch (\Exception $e ) {
+            \Yii::error($e->getMessage(), 'lang');
+        }
+        return null;
     }
 
     /**
@@ -34,7 +39,7 @@ class LangBehavior extends Behavior
      */
     public function getLangLabel() : string
     {
-        $lang = $this->getLang()->one();
+        $lang = ( $lang = $this->getLang() ) ? $lang->one() : false;
         return $lang ? $lang->native_name : '';
     }
 }

@@ -2,7 +2,12 @@
 
 use common\models\Language;
 
-$codes = Language::getDropDownList(['to' => 'code'])[0];
+try {
+    $codes = Language::getDropDownList(['to' => 'code'])[0];
+} catch ( Exception $e ) {
+    Yii::error($e->getMessage(), 'lang');
+    $codes = ['en'];
+}
 
 echo "Languages for translate:\r\n";
 var_dump( $codes );
