@@ -56,8 +56,8 @@ abstract class CrudModel extends ActiveRecord {
             'icon' => [
                 'class' => ImageBehavior::class,
                 'imageField' => 'icon_id',
-                'imageWidth' => 20,
-                'imageHeight' => 20
+                'imageWidth' => 30,
+                'imageHeight' => 30
             ],
             'created.save' => [
                 'class'      => AttributeBehavior::class,
