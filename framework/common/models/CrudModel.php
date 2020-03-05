@@ -79,6 +79,9 @@ abstract class CrudModel extends ActiveRecord {
      */
     public function getFreeCodes() : array
     {
+        if (Yii::$app->user->can('admin')) {
+            return $this->getCodesFilter();
+        }
         $collection = static::findAll(['lang_id' => Language::current()->id]);
         $denied = ArrayHelper::getColumn($collection, 'code');
         return $this->getCodesFilter(
@@ -87,13 +90,13 @@ abstract class CrudModel extends ActiveRecord {
     }
 
     /**
-     * @param array $codes
+     * @param mixed $codes
      * @return array
      */
-    public function getCodesFilter(array $codes = []) : array
+    public function getCodesFilter($codes = null) : array
     {
         $filter = [];
-        $codes = $codes ?: $this->getCodes();
+        $codes = is_null($codes) ? $this->getCodes() : (array) $codes;
         foreach( $codes as $code ) {
             $filter[$code] = $code;
         }

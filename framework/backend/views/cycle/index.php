@@ -15,9 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+    <?php if(Yii::$app->user->can('admin') || !!$searchModel->freeCodes): ?>
     <p>
         <?= Html::a(Yii::t('app', 'Create Cycle'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
+    <?php endif; ?>
 
     <?php Pjax::begin(); ?>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
