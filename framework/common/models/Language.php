@@ -64,7 +64,7 @@ class Language extends CrudModel
             'code',
             'name',
             'native_name',
-            'owner_id',
+            'ownerName',
             'created_at:datetime',
             'updated_at:datetime',
         ];
@@ -96,7 +96,8 @@ class Language extends CrudModel
             'code' => Yii::t('app', 'Code'),
             'name' => Yii::t('app', 'Name'),
             'native_name' => Yii::t('app', 'Native Name'),
-            'owner_id' => Yii::t('app', 'Owner ID'),
+            'owner_id' => Yii::t('app', 'Owner'),
+            'ownerName' => Yii::t('app', 'Owner'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
         ];

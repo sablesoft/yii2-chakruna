@@ -60,11 +60,11 @@ class Cycle extends CrudModel
     {
         return [
             'id',
-            'lang_id',
+            'langLabel',
             'imagePath:image',
             'name',
             'desc:ntext',
-            'owner_id',
+            'ownerName',
             'created_at:datetime',
             'updated_at:datetime',
         ];
@@ -78,13 +78,15 @@ class Cycle extends CrudModel
         return [
             'id' => Yii::t('app', 'ID'),
             'lang_id' => Yii::t('app', 'Language'),
+            'langLabel' => Yii::t('app', 'Language'),
             'icon_id' => Yii::t('app', 'Icon'),
             'imagePath' => Yii::t('app', 'Icon'),
             'name' => Yii::t('app', 'Name'),
             'desc' => Yii::t('app', 'Desc'),
-            'owner_id' => Yii::t('app', 'Owner ID'),
+            'owner_id' => Yii::t('app', 'Owner'),
+            'ownerName' => Yii::t('app', 'Owner'),
             'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
+            'updated_at' => Yii::t('app', 'Updated At')
         ];
     }
 

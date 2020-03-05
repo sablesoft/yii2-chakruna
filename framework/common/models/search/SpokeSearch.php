@@ -2,9 +2,11 @@
 
 namespace common\models\search;
 
+use common\models\Element;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\Spoke;
+use common\models\Language;
 
 /**
  * SpokeSearch represents the model behind the search form of `common\models\Spoke`.
@@ -27,9 +29,23 @@ class SpokeSearch extends Spoke
         return [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'lang_id',
-            'element_id',
+//            'id',
+            [
+                'attribute' => 'lang_id',
+                'value' => function ($model) {
+                    /** @var Spoke $model */
+                    return $model->langLabel;
+                },
+                'filter' => Language::getDropDownList()[0]
+            ],
+            [
+                'attribute' => 'element_id',
+                'value' => function ($model) {
+                    /** @var Spoke $model */
+                    return $model->element->name;
+                },
+                'filter' => Element::getDropDownList()[0]
+            ],
             [
                 'attribute' => 'icon_id',
                 'value' => function( $model ) {
@@ -43,9 +59,16 @@ class SpokeSearch extends Spoke
             'name',
             //'direction',
             //'desc:ntext',
-            //'owner_id',
-            //'created_at',
-            //'updated_at',
+//            [
+//                'attribute' => 'owner_id',
+//                'value' => function ($model) {
+//                    /** @var Spoke $model */
+//                    return $model->ownerUser->username;
+//                },
+//                'filter' => User::getDropDownList()[0]
+//            ],
+            'created_at:datetime',
+            'updated_at:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
         ];

@@ -5,6 +5,7 @@ use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
+use yii\helpers\ArrayHelper;
 use yii\web\IdentityInterface;
 
 /**
@@ -185,5 +186,26 @@ class User extends ActiveRecord implements IdentityInterface
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+
+    /**
+     * @return array
+     */
+    public static function getDropDownList( $config = [] ) : array {
+        // prepare items:
+        $query = static::find();
+        $where = !empty( $config['where'] )? $config['where'] : false;
+        if( is_array( $where ) )
+            $query = $query->where( $where );
+        $models = $query->all();
+        $from = !empty( $config['from'] )? $config['from'] : 'id';
+        $to = !empty( $config['to'] )? $config['to'] : 'username';
+        $items = ArrayHelper::map( $models, $from, $to );
+        // prepare params:
+        $params = [];
+        if( isset( $config['prompt'] ) )
+            $params['prompt'] = $config['prompt'];
+
+        return [ $items, $params ];
     }
 }

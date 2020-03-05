@@ -5,6 +5,9 @@ namespace common\models\search;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\Lair;
+use common\models\Cycle;
+use common\models\Spoke;
+use common\models\Language;
 
 /**
  * LairSearch represents the model behind the search form of `common\models\Lair`.
@@ -27,26 +30,54 @@ class LairSearch extends Lair
         return [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'lang_id',
-            'cycle_id',
-            'spoke_id',
+//            'id',
             [
-                'attribute' => 'icon_id',
-                'value' => function( $model ) {
+                'attribute' => 'lang_id',
+                'value' => function ($model) {
                     /** @var Lair $model */
-                    return $model->imagePath;
+                    return $model->langLabel;
                 },
-                'format' => 'image',
-                'enableSorting' => false,
-                'filter' => false
+                'filter' => Language::getDropDownList()[0]
             ],
+            [
+                'attribute' => 'cycle_id',
+                'value' => function ($model) {
+                    /** @var Lair $model */
+                    return $model->cycle->name;
+                },
+                'filter' => Cycle::getDropDownList()[0]
+            ],
+            [
+                'attribute' => 'spoke_id',
+                'value' => function ($model) {
+                    /** @var Lair $model */
+                    return $model->spoke->name;
+                },
+                'filter' => Spoke::getDropDownList()[0]
+            ],
+//            [
+//                'attribute' => 'icon_id',
+//                'value' => function( $model ) {
+//                    /** @var Lair $model */
+//                    return $model->imagePath;
+//                },
+//                'format' => 'image',
+//                'enableSorting' => false,
+//                'filter' => false
+//            ],
             'name',
-            'period',
+//            'period',
             //'desc:ntext',
-            //'owner_id',
-            //'created_at',
-            //'updated_at',
+//            [
+//                'attribute' => 'owner_id',
+//                'value' => function ($model) {
+//                    /** @var Lair $model */
+//                    return $model->ownerUser->username;
+//                },
+//                'filter' => User::getDropDownList()[0]
+//            ],
+            'created_at:datetime',
+            'updated_at:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
         ];

@@ -5,7 +5,6 @@ namespace common\models;
 use Yii;
 use common\models\query\SpokeQuery;
 use common\models\query\ElementQuery;
-use common\models\query\LanguageQuery;
 use noam148\imagemanager\models\ImageManager;
 
 /**
@@ -21,7 +20,6 @@ use noam148\imagemanager\models\ImageManager;
  * @property string $updated_at Last update time
  *
  * @property ImageManager $icon
- * @property Language $lang
  * @property User $owner
  * @property Spoke[] $spokes
  */
@@ -57,11 +55,11 @@ class Element extends CrudModel
     {
         return [
             'id',
-            'lang_id',
+            'langLabel',
             'imagePath:image',
             'name',
             'desc:ntext',
-            'owner_id',
+            'ownerName',
             'created_at:datetime',
             'updated_at:datetime',
         ];
@@ -75,11 +73,13 @@ class Element extends CrudModel
         return [
             'id' => Yii::t('app', 'ID'),
             'lang_id' => Yii::t('app', 'Language'),
+            'langLabel' => Yii::t('app', 'Language'),
             'icon_id' => Yii::t('app', 'Icon'),
             'imagePath' => Yii::t('app', 'Icon'),
             'name' => Yii::t('app', 'Name'),
             'desc' => Yii::t('app', 'Desc'),
-            'owner_id' => Yii::t('app', 'Owner ID'),
+            'owner_id' => Yii::t('app', 'Owner'),
+            'ownerName' => Yii::t('app', 'Owner'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
         ];
@@ -93,16 +93,6 @@ class Element extends CrudModel
     public function getIcon()
     {
         return $this->hasOne(ImageManager::class, ['id' => 'icon_id']);
-    }
-
-    /**
-     * Gets query for [[Lang]].
-     *
-     * @return \yii\db\ActiveQuery|LanguageQuery
-     */
-    public function getLang()
-    {
-        return $this->hasOne(Language::class, ['id' => 'lang_id']);
     }
 
     /**

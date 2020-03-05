@@ -4,8 +4,9 @@ namespace common\models\search;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
+use common\models\User;
 use common\models\Cycle;
-use common\behavior\DateFilterBehavior;
+use common\models\Language;
 
 /**
  * CycleSearch represents the model behind the search form of `common\models\Cycle`.
@@ -23,22 +24,20 @@ class CycleSearch extends Cycle
         ];
     }
 
-    /**
-     * @return array
-     */
-    public function behaviors() {
-        return array_merge( parent::behaviors(), [
-            DateFilterBehavior::class
-        ]);
-    }
-
     public function getColumns() : array
     {
         return [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'lang_id',
+//            'id',
+            [
+                'attribute' => 'lang_id',
+                'value' => function ($model) {
+                    /** @var Cycle $model */
+                    return $model->langLabel;
+                },
+                'filter' => Language::getDropDownList()[0]
+            ],
             [
                 'attribute' => 'icon_id',
                 'value' => function( $model ) {
@@ -51,49 +50,19 @@ class CycleSearch extends Cycle
             ],
             'name',
             'desc:ntext',
-            //'owner_id',
-            //'created_at',
-            //'updated_at',
+//            [
+//                'attribute' => 'owner_id',
+//                'value' => function ($model) {
+//                    /** @var Cycle $model */
+//                    return $model->ownerUser->username;
+//                },
+//                'filter' => User::getDropDownList()[0]
+//            ],
+            'created_at:datetime',
+            'updated_at:datetime',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn']
         ];
-
-//        $columns = [
-//            ['class' => 'yii\grid\SerialColumn'],
-//            'name',
-//            [
-//                'attribute' => 'sex',
-//                'value' => function ($model) {
-//                    /** @var \common\models\Member $model */
-//                    return $model->sexLabel;
-//                },
-//                'filter' => Member::getSexDropDownList()
-//            ],
-//            [
-//                'attribute' => 'age',
-//                'value' => function ($model) {
-//                    /** @var \common\models\Member $model */
-//                    return $model->ageLabel;
-//                }
-//            ],
-//            [
-//                'attribute' => 'group_id',
-//                'value' => function ($model) {
-//                    /** @var \common\models\Member $model */
-//                    return $model->groupLabel;
-//                },
-//                'filter' => \common\models\Group::getDropDownList()[0]
-//            ],
-//            [
-//                'attribute' => 'phone',
-//                'value' => function ($model) {
-//                    /** @var \common\models\Member $model */
-//                    return $model->maskedPhone;
-//                }
-//            ],
-//            'email:email',
-//            'visitsCount:integer'
-//        ];
     }
 
     /**

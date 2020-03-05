@@ -12,7 +12,6 @@ use common\behavior\OwnerBehavior;
 use common\models\query\LanguageQuery;
 use common\behavior\DateFilterBehavior;
 
-
 /**
  * Class CrudModel
  *
@@ -25,6 +24,7 @@ use common\behavior\DateFilterBehavior;
  * @property int $is_blocked
  * @property bool $isCheckDefault
  * @property User|null $ownerUser
+ * @property string $ownerName
  * @property string|null $imagePath
  * @property Language|null $lang
  * @property string $langLabel

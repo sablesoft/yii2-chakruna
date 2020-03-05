@@ -6,7 +6,6 @@ use Yii;
 use common\models\query\CycleQuery;
 use common\models\query\LairQuery;
 use common\models\query\SpokeQuery;
-use common\models\query\LanguageQuery;
 use noam148\imagemanager\models\ImageManager;
 
 /**
@@ -25,10 +24,11 @@ use noam148\imagemanager\models\ImageManager;
  * @property string $updated_at Last update time
  *
  * @property Cycle $cycle
+ * @property string $cycleLabel
  * @property ImageManager $icon
- * @property Language $lang
  * @property User $owner
  * @property Spoke $spoke
+ * @property string $spokeLabel
  */
 class Lair extends CrudModel
 {
@@ -66,14 +66,14 @@ class Lair extends CrudModel
     {
         return [
             'id',
-            'lang_id',
-            'cycle_id',
-            'spoke_id',
+            'langLabel',
+            'cycleLabel',
+            'spokeLabel',
             'imagePath:image',
             'name',
             'period',
             'desc:ntext',
-            'owner_id',
+            'ownerName',
             'created_at:datetime',
             'updated_at:datetime',
         ];
@@ -87,14 +87,18 @@ class Lair extends CrudModel
         return [
             'id' => Yii::t('app', 'ID'),
             'lang_id' => Yii::t('app', 'Language'),
-            'cycle_id' => Yii::t('app', 'Cycle ID'),
-            'spoke_id' => Yii::t('app', 'Spoke ID'),
+            'langLabel' => Yii::t('app', 'Language'),
+            'cycle_id' => Yii::t('app', 'Cycle'),
+            'spoke_id' => Yii::t('app', 'Spoke'),
+            'cycleLabel' => Yii::t('app', 'Cycle'),
+            'spokeLabel' => Yii::t('app', 'Spoke'),
             'icon_id' => Yii::t('app', 'Icon'),
             'imagePath' => Yii::t('app', 'Icon'),
             'name' => Yii::t('app', 'Name'),
             'period' => Yii::t('app', 'Period'),
             'desc' => Yii::t('app', 'Desc'),
-            'owner_id' => Yii::t('app', 'Owner ID'),
+            'owner_id' => Yii::t('app', 'Owner'),
+            'ownerName' => Yii::t('app', 'Owner'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
         ];
@@ -111,6 +115,14 @@ class Lair extends CrudModel
     }
 
     /**
+     * @return string
+     */
+    public function getCycleLabel() : string
+    {
+        return ($cycle = $this->cycle) ? $cycle->name : '';
+    }
+
+    /**
      * Gets query for [[Icon]].
      *
      * @return \yii\db\ActiveQuery
@@ -121,16 +133,6 @@ class Lair extends CrudModel
     }
 
     /**
-     * Gets query for [[Lang]].
-     *
-     * @return \yii\db\ActiveQuery|LanguageQuery
-     */
-    public function getLang()
-    {
-        return $this->hasOne(Language::class, ['id' => 'lang_id']);
-    }
-
-    /**
      * Gets query for [[Spoke]].
      *
      * @return \yii\db\ActiveQuery|SpokeQuery
@@ -138,6 +140,14 @@ class Lair extends CrudModel
     public function getSpoke()
     {
         return $this->hasOne(Spoke::class, ['id' => 'spoke_id']);
+    }
+
+    /**
+     * @return string
+     */
+    public function getSpokeLabel() : string
+    {
+        return ($spoke = $this->spoke) ? $spoke->name : '';
     }
 
     /**

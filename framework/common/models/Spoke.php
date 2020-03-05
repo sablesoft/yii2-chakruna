@@ -6,7 +6,6 @@ use Yii;
 use common\models\query\LairQuery;
 use common\models\query\SpokeQuery;
 use common\models\query\ElementQuery;
-use common\models\query\LanguageQuery;
 use noam148\imagemanager\models\ImageManager;
 
 /**
@@ -25,8 +24,8 @@ use noam148\imagemanager\models\ImageManager;
  *
  * @property Lair[] $lairs
  * @property Element $element
+ * @property string $elementLabel
  * @property ImageManager $icon
- * @property Language $lang
  * @property User $owner
  */
 class Spoke extends CrudModel
@@ -67,13 +66,13 @@ class Spoke extends CrudModel
     {
         return [
             'id',
-            'lang_id',
-            'element_id',
+            'langLabel',
+            'elementLabel',
             'imagePath:image',
             'name',
             'direction',
             'desc:ntext',
-            'owner_id',
+            'ownerName',
             'created_at:datetime',
             'updated_at:datetime',
         ];
@@ -87,13 +86,16 @@ class Spoke extends CrudModel
         return [
             'id' => Yii::t('app', 'ID'),
             'lang_id' => Yii::t('app', 'Language'),
-            'element_id' => Yii::t('app', 'Element ID'),
+            'langLabel' => Yii::t('app', 'Language'),
+            'element_id' => Yii::t('app', 'Element'),
+            'elementLabel' => Yii::t('app', 'Element'),
             'icon_id' => Yii::t('app', 'Icon'),
             'imagePath' => Yii::t('app', 'Icon'),
             'name' => Yii::t('app', 'Name'),
             'direction' => Yii::t('app', 'Direction'),
             'desc' => Yii::t('app', 'Desc'),
-            'owner_id' => Yii::t('app', 'Owner ID'),
+            'owner_id' => Yii::t('app', 'Owner'),
+            'ownerName' => Yii::t('app', 'Owner'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
         ];
@@ -120,6 +122,14 @@ class Spoke extends CrudModel
     }
 
     /**
+     * @return string
+     */
+    public function getElementLabel() : string
+    {
+        return ($element = $this->element) ? $element->name : '';
+    }
+
+    /**
      * Gets query for [[Icon]].
      *
      * @return \yii\db\ActiveQuery
@@ -127,16 +137,6 @@ class Spoke extends CrudModel
     public function getIcon()
     {
         return $this->hasOne(ImageManager::class, ['id' => 'icon_id']);
-    }
-
-    /**
-     * Gets query for [[Lang]].
-     *
-     * @return \yii\db\ActiveQuery|LanguageQuery
-     */
-    public function getLang()
-    {
-        return $this->hasOne(Language::class, ['id' => 'lang_id']);
     }
 
     /**

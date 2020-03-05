@@ -2,9 +2,11 @@
 
 namespace common\models\search;
 
+use common\models\User;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\Element;
+use common\models\Language;
 
 /**
  * ElementSearch represents the model behind the search form of `common\models\Element`.
@@ -30,8 +32,15 @@ class ElementSearch extends Element
         return [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'lang_id',
+//            'id',
+            [
+                'attribute' => 'lang_id',
+                'value' => function ($model) {
+                    /** @var Element $model */
+                    return $model->langLabel;
+                },
+                'filter' => Language::getDropDownList()[0]
+            ],
             [
                 'attribute' => 'icon_id',
                 'value' => function( $model ) {
@@ -44,9 +53,16 @@ class ElementSearch extends Element
             ],
             'name',
             'desc:ntext',
-            //'owner_id',
-            //'created_at',
-            //'updated_at',
+//            [
+//                'attribute' => 'owner_id',
+//                'value' => function ($model) {
+//                    /** @var Element $model */
+//                    return $model->ownerUser->username;
+//                },
+//                'filter' => User::getDropDownList()[0]
+//            ],
+            'created_at:datetime',
+            'updated_at:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
         ];
@@ -91,10 +107,11 @@ class ElementSearch extends Element
             'id' => $this->id,
             'lang_id' => $this->lang_id,
             'icon_id' => $this->icon_id,
-            'owner_id' => $this->owner_id,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'owner_id' => $this->owner_id
         ]);
+
+        $query = $this->applyDateFilter( 'created_at', $query );
+        $query = $this->applyDateFilter( 'updated_at', $query );
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'desc', $this->desc]);

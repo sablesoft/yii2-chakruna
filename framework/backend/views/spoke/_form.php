@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use common\models\Element;
 use common\models\Language;
 use noam148\imagemanager\components\ImageManagerInputWidget;
 
@@ -19,7 +20,10 @@ use noam148\imagemanager\components\ImageManagerInputWidget;
         'prompt' => Yii::t('app', 'Select language')
     ])); ?>
 
-    <?= $form->field($model, 'element_id')->textInput() ?>
+    <?= $form->field($model, 'element_id')->dropDownList(
+        ...Element::getDropDownList([
+        'prompt' => Yii::t('app', 'Select element')
+    ])); ?>
 
     <?= $form->field( $model, 'icon_id')->widget( ImageManagerInputWidget::class, [
         'aspectRatio' => ( 16 / 9 ), //set the aspect ratio

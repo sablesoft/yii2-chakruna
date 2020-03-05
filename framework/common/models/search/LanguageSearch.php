@@ -30,13 +30,20 @@ class LanguageSearch extends Language
         return [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+//            'id',
             'code',
             'name',
             'native_name',
-            'owner_id',
-            //'created_at',
-            //'updated_at',
+//            [
+//                'attribute' => 'owner_id',
+//                'value' => function ($model) {
+//                    /** @var Language $model */
+//                    return $model->ownerUser->username;
+//                },
+//                'filter' => User::getDropDownList()[0]
+//            ],
+            'created_at:datetime',
+            'updated_at:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
         ];

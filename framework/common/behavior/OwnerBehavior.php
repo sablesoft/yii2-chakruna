@@ -1,4 +1,5 @@
-<?php
+<?php /** @noinspection PhpPossiblePolymorphicInvocationInspection */
+
 namespace common\behavior;
 
 use common\models\User;
@@ -9,6 +10,7 @@ use yii\behaviors\AttributeBehavior;
  * @package common\behavior
  *
  * @property User|null $ownerUser
+ * @property string $ownerName
  */
 class OwnerBehavior extends AttributeBehavior {
 
@@ -31,6 +33,11 @@ class OwnerBehavior extends AttributeBehavior {
             return null;
 
         return User::findOne( $this->owner->owner_id );
+    }
+
+    public function getOwnerName() : string {
+        /** @var User $owner */
+        return ($owner = $this->getOwnerUser()) ? $owner->username : '';
     }
 
 }
