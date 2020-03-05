@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use common\models\Spoke;
+use common\models\Cycle;
 use common\models\Language;
 use noam148\imagemanager\components\ImageManagerInputWidget;
 
@@ -21,9 +23,15 @@ use noam148\imagemanager\components\ImageManagerInputWidget;
         'prompt' => Yii::t('app', 'Select language')
     ])); ?>
 
-    <?= $form->field($model, 'cycle_id')->textInput() ?>
+    <?= $form->field($model, 'cycle_id')->dropDownList(
+        ...Cycle::getDropDownList([
+        'prompt' => Yii::t('app', 'Select cycle')
+    ])); ?>
 
-    <?= $form->field($model, 'spoke_id')->textInput() ?>
+    <?= $form->field($model, 'spoke_id')->dropDownList(
+        ...Spoke::getDropDownList([
+        'prompt' => Yii::t('app', 'Select spoke')
+    ])); ?>
 
     <?= $form->field( $model, 'icon_id')->widget( ImageManagerInputWidget::class, [
         'aspectRatio' => ( 16 / 9 ), //set the aspect ratio
