@@ -23,9 +23,12 @@ class CycleSearch extends Cycle
         ];
     }
 
+    /**
+     * @return array
+     */
     public function getColumns() : array
     {
-        return [
+        $columns = [
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
@@ -36,15 +39,21 @@ class CycleSearch extends Cycle
                     return $model->code;
                 },
                 'filter' => $this->codesFilter
-            ],
-            [
+            ]
+        ];
+
+        if(\Yii::$app->user->can('admin')) {
+            $columns[] = [
                 'attribute' => 'lang_id',
                 'value' => function ($model) {
                     /** @var Cycle $model */
                     return $model->langLabel;
                 },
                 'filter' => Language::getDropDownList(['to' => 'native_name'])[0]
-            ],
+            ];
+        }
+
+        return array_merge($columns, [
             [
                 'attribute' => 'icon_id',
                 'value' => function( $model ) {
@@ -69,7 +78,7 @@ class CycleSearch extends Cycle
             'updated_at:datetime',
 
             ['class' => 'yii\grid\ActionColumn']
-        ];
+        ]);
     }
 
     /**
@@ -99,6 +108,11 @@ class CycleSearch extends Cycle
         ]);
 
         $this->load($params);
+
+        // check language filter:
+        if (!\Yii::$app->user->can('admin')) {
+            $this->lang_id = Language::current()->id;
+        }
 
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails

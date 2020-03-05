@@ -93,6 +93,7 @@ abstract class CrudModel extends ActiveRecord {
     {
         return [
             'id' => Yii::t('app', 'ID'),
+            'code' => Yii::t('app', 'Code'),
             'lang_id' => Yii::t('app', 'Language'),
             'langLabel' => Yii::t('app', 'Language'),
             'icon_id' => Yii::t('app', 'Icon'),

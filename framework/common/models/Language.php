@@ -145,4 +145,12 @@ class Language extends CrudModel
     {
         return new LanguageQuery(get_called_class());
     }
+
+    /**
+     * @return Language
+     */
+    public static function current() : Language
+    {
+        return static::findOne(['code' => \Yii::$app->language]);
+    }
 }
