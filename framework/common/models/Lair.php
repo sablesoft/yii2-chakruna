@@ -11,22 +11,12 @@ use noam148\imagemanager\models\ImageManager;
 /**
  * This is the model class for table "lair".
  *
- * @property int $id
- * @property int $lang_id Language ID
  * @property int $cycle_id Cycle ID
  * @property int $spoke_id Spoke ID
- * @property int|null $icon_id Lair icon ID
- * @property string $name Lair localized name
  * @property string $period Lair localized period
- * @property string|null $desc Lair localized description
- * @property int $owner_id Owner
- * @property string $created_at Creation time
- * @property string $updated_at Last update time
  *
  * @property Cycle $cycle
  * @property string $cycleLabel
- * @property ImageManager $icon
- * @property User $owner
  * @property Spoke $spoke
  * @property string $spokeLabel
  */
@@ -46,13 +36,16 @@ class Lair extends CrudModel
     public function rules()
     {
         return [
-            [['lang_id', 'cycle_id', 'spoke_id', 'name', 'period'], 'required'],
+            [['lang_id', 'cycle_id', 'spoke_id', 'name', 'period', 'code'], 'required'],
             [['lang_id', 'cycle_id', 'spoke_id', 'icon_id', 'owner_id'], 'integer'],
             [['desc'], 'string'],
+            [['code'], 'match', 'pattern' => '/^[a-z]+$/', 'message' => 'Code can only contain little latin characters'],
             [['created_at', 'updated_at'], 'safe'],
             [['name'], 'string', 'max' => 20],
+            [['code'], 'string', 'max' => 10],
             [['period'], 'string', 'max' => 255],
             [['name'], 'unique'],
+            [['code', 'lang_id'], 'unique', 'targetAttribute' => ['code', 'lang_id']],
             [['cycle_id', 'spoke_id', 'lang_id'], 'unique', 'targetAttribute' => ['cycle_id', 'spoke_id', 'lang_id']],
             [['cycle_id'], 'exist', 'skipOnError' => true, 'targetClass' => Cycle::class, 'targetAttribute' => ['cycle_id' => 'id']],
             [['icon_id'], 'exist', 'skipOnError' => true, 'targetClass' => ImageManager::class, 'targetAttribute' => ['icon_id' => 'id']],
@@ -66,6 +59,7 @@ class Lair extends CrudModel
     {
         return [
             'id',
+            'code',
             'langLabel',
             'cycleLabel',
             'spokeLabel',
@@ -84,24 +78,13 @@ class Lair extends CrudModel
      */
     public function attributeLabels()
     {
-        return [
-            'id' => Yii::t('app', 'ID'),
-            'lang_id' => Yii::t('app', 'Language'),
-            'langLabel' => Yii::t('app', 'Language'),
+        return array_merge(parent::attributeLabels(),[
             'cycle_id' => Yii::t('app', 'Cycle'),
             'spoke_id' => Yii::t('app', 'Spoke'),
             'cycleLabel' => Yii::t('app', 'Cycle'),
             'spokeLabel' => Yii::t('app', 'Spoke'),
-            'icon_id' => Yii::t('app', 'Icon'),
-            'imagePath' => Yii::t('app', 'Icon'),
-            'name' => Yii::t('app', 'Name'),
-            'period' => Yii::t('app', 'Period'),
-            'desc' => Yii::t('app', 'Desc'),
-            'owner_id' => Yii::t('app', 'Owner'),
-            'ownerName' => Yii::t('app', 'Owner'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
-        ];
+            'period' => Yii::t('app', 'Period')
+        ]);
     }
 
     /**
@@ -122,15 +105,6 @@ class Lair extends CrudModel
         return ($cycle = $this->cycle) ? $cycle->name : '';
     }
 
-    /**
-     * Gets query for [[Icon]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIcon()
-    {
-        return $this->hasOne(ImageManager::class, ['id' => 'icon_id']);
-    }
 
     /**
      * Gets query for [[Spoke]].

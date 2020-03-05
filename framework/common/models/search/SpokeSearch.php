@@ -20,7 +20,7 @@ class SpokeSearch extends Spoke
     {
         return [
             [['id', 'lang_id', 'element_id', 'icon_id', 'owner_id'], 'integer'],
-            [['name', 'direction', 'desc', 'created_at', 'updated_at'], 'safe'],
+            [['code', 'name', 'direction', 'desc', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -30,6 +30,7 @@ class SpokeSearch extends Spoke
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
+            'code',
             [
                 'attribute' => 'lang_id',
                 'value' => function ($model) {
@@ -111,13 +112,15 @@ class SpokeSearch extends Spoke
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'code' => $this->code,
             'lang_id' => $this->lang_id,
             'element_id' => $this->element_id,
             'icon_id' => $this->icon_id,
-            'owner_id' => $this->owner_id,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'owner_id' => $this->owner_id
         ]);
+
+        $query = $this->applyDateFilter( 'created_at', $query );
+        $query = $this->applyDateFilter( 'updated_at', $query );
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'direction', $this->direction])

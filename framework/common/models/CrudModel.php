@@ -1,6 +1,7 @@
 <?php
 namespace common\models;
 
+use Yii;
 use yii\db\ActiveQuery;
 use yii\db\Exception;
 use yii\db\ActiveRecord;
@@ -18,11 +19,15 @@ use common\behavior\DateFilterBehavior;
  * @package common\models
  *
  * @property int $id
+ * @property string $code
+ * @property string $lang_id
  * @property int $owner_id
+ * @property int|null $icon_id Cycle icon ID
  * @property int|string $created_at
  * @property int|string $updated_at
- * @property int $is_blocked
- * @property bool $isCheckDefault
+ * @property string $name Localized name
+ * @property string|null $desc Localized description
+ *
  * @property User|null $ownerUser
  * @property string $ownerName
  * @property string|null $imagePath
@@ -56,6 +61,27 @@ abstract class CrudModel extends ActiveRecord {
     public function getColumns() : array
     {
         return [];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => Yii::t('app', 'ID'),
+            'lang_id' => Yii::t('app', 'Language'),
+            'langLabel' => Yii::t('app', 'Language'),
+            'icon_id' => Yii::t('app', 'Icon'),
+            'imagePath' => Yii::t('app', 'Icon'),
+            'name' => Yii::t('app', 'Name'),
+            'direction' => Yii::t('app', 'Direction'),
+            'desc' => Yii::t('app', 'Desc'),
+            'owner_id' => Yii::t('app', 'Owner'),
+            'ownerName' => Yii::t('app', 'Owner'),
+            'created_at' => Yii::t('app', 'Created At'),
+            'updated_at' => Yii::t('app', 'Updated At'),
+        ];
     }
 
     /**

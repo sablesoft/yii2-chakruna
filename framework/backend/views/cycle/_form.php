@@ -14,6 +14,8 @@ use noam148\imagemanager\components\ImageManagerInputWidget;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'lang_id')->dropDownList(
         ...Language::getDropDownList([
         'prompt' => Yii::t('app', 'Select language')

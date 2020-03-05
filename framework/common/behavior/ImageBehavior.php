@@ -3,7 +3,10 @@ namespace common\behavior;
 
 use yii\helpers\Html;
 use yii\base\Behavior;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
+use noam148\imagemanager\models\ImageManager;
 use noam148\imagemanager\components\ImageManagerGetPath;
 
 /**
@@ -11,6 +14,7 @@ use noam148\imagemanager\components\ImageManagerGetPath;
  * @package common\behavior
  *
  * @property string $imagePath
+ * @property ActiveRecord|ActiveQuery $imageModel
  */
 class ImageBehavior extends  Behavior {
 
@@ -53,5 +57,15 @@ class ImageBehavior extends  Behavior {
         $path = $this->getImagePath( $pathOptions );
 
         return Html::img( $path, $options );
+    }
+
+    /**
+     * Gets query for [[Icon]].
+     *
+     * @return ActiveQuery|ActiveRecord
+     */
+    public function getImageModel()
+    {
+        return $this->owner->hasOne(ImageManager::class, ['id' => $this->imageField]);
     }
 }

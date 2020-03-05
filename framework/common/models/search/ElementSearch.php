@@ -20,7 +20,7 @@ class ElementSearch extends Element
     {
         return [
             [['id', 'lang_id', 'icon_id', 'owner_id'], 'integer'],
-            [['name', 'desc', 'created_at', 'updated_at'], 'safe'],
+            [['code', 'name', 'desc', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -33,6 +33,7 @@ class ElementSearch extends Element
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
+            'code',
             [
                 'attribute' => 'lang_id',
                 'value' => function ($model) {

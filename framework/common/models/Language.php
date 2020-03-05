@@ -12,18 +12,11 @@ use common\models\query\LanguageQuery;
 /**
  * This is the model class for table "language".
  *
- * @property int $id
- * @property string $code Language code
- * @property string $name Language default name
  * @property string $native_name Language native name
- * @property int $owner_id Owner
- * @property string $created_at Creation time
- * @property string $updated_at Last update time
  *
  * @property Cycle[] $cycles
  * @property Element[] $elements
  * @property Lair[] $lairs
- * @property User $owner
  * @property Spoke[] $spokes
  */
 class Language extends CrudModel

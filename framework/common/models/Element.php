@@ -2,7 +2,6 @@
 
 namespace common\models;
 
-use Yii;
 use common\models\query\SpokeQuery;
 use common\models\query\ElementQuery;
 use noam148\imagemanager\models\ImageManager;
@@ -10,17 +9,6 @@ use noam148\imagemanager\models\ImageManager;
 /**
  * This is the model class for table "element".
  *
- * @property int $id
- * @property int $lang_id Language ID
- * @property int|null $icon_id Element icon ID
- * @property string $name Element localized name
- * @property string|null $desc Element localized description
- * @property int|null $owner_id Owner
- * @property string $created_at Creation time
- * @property string $updated_at Last update time
- *
- * @property ImageManager $icon
- * @property User $owner
  * @property Spoke[] $spokes
  */
 class Element extends CrudModel
@@ -39,12 +27,15 @@ class Element extends CrudModel
     public function rules()
     {
         return [
-            [['lang_id', 'name'], 'required'],
+            [['lang_id', 'name', 'code'], 'required'],
             [['lang_id', 'icon_id', 'owner_id'], 'integer'],
             [['desc'], 'string'],
+            [['code'], 'match', 'pattern' => '/^[a-z]+$/', 'message' => 'Code can only contain little latin characters'],
             [['created_at', 'updated_at'], 'safe'],
             [['name'], 'string', 'max' => 20],
+            [['code'], 'string', 'max' => 10],
             [['name'], 'unique'],
+            [['code', 'lang_id'], 'unique', 'targetAttribute' => ['code', 'lang_id']],
             [['icon_id'], 'exist', 'skipOnError' => true, 'targetClass' => ImageManager::class, 'targetAttribute' => ['icon_id' => 'id']],
             [['lang_id'], 'exist', 'skipOnError' => true, 'targetClass' => Language::class, 'targetAttribute' => ['lang_id' => 'id']],
             [['owner_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['owner_id' => 'id']],
@@ -55,6 +46,7 @@ class Element extends CrudModel
     {
         return [
             'id',
+            'code',
             'langLabel',
             'imagePath:image',
             'name',
@@ -63,36 +55,6 @@ class Element extends CrudModel
             'created_at:datetime',
             'updated_at:datetime',
         ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function attributeLabels()
-    {
-        return [
-            'id' => Yii::t('app', 'ID'),
-            'lang_id' => Yii::t('app', 'Language'),
-            'langLabel' => Yii::t('app', 'Language'),
-            'icon_id' => Yii::t('app', 'Icon'),
-            'imagePath' => Yii::t('app', 'Icon'),
-            'name' => Yii::t('app', 'Name'),
-            'desc' => Yii::t('app', 'Desc'),
-            'owner_id' => Yii::t('app', 'Owner'),
-            'ownerName' => Yii::t('app', 'Owner'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
-        ];
-    }
-
-    /**
-     * Gets query for [[Icon]].
-     *
-     * @return \yii\db\ActiveQuery|
-     */
-    public function getIcon()
-    {
-        return $this->hasOne(ImageManager::class, ['id' => 'icon_id']);
     }
 
     /**

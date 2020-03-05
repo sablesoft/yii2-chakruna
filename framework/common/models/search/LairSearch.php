@@ -21,7 +21,7 @@ class LairSearch extends Lair
     {
         return [
             [['id', 'lang_id', 'cycle_id', 'spoke_id', 'icon_id', 'owner_id'], 'integer'],
-            [['name', 'period', 'desc', 'created_at', 'updated_at'], 'safe'],
+            [['code', 'name', 'period', 'desc', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -31,6 +31,7 @@ class LairSearch extends Lair
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
+            'code',
             [
                 'attribute' => 'lang_id',
                 'value' => function ($model) {
@@ -120,14 +121,16 @@ class LairSearch extends Lair
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'code' => $this->code,
             'lang_id' => $this->lang_id,
             'cycle_id' => $this->cycle_id,
             'spoke_id' => $this->spoke_id,
             'icon_id' => $this->icon_id,
-            'owner_id' => $this->owner_id,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'owner_id' => $this->owner_id
         ]);
+
+        $query = $this->applyDateFilter( 'created_at', $query );
+        $query = $this->applyDateFilter( 'updated_at', $query );
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'period', $this->period])

@@ -20,7 +20,7 @@ class CycleSearch extends Cycle
     {
         return [
             [['id', 'lang_id', 'icon_id', 'owner_id'], 'integer'],
-            [['name', 'desc', 'created_at', 'updated_at'], 'safe'],
+            [['name', 'desc', 'created_at', 'updated_at', 'code'], 'safe'],
         ];
     }
 
@@ -30,6 +30,7 @@ class CycleSearch extends Cycle
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
+            'code',
             [
                 'attribute' => 'lang_id',
                 'value' => function ($model) {
@@ -102,6 +103,7 @@ class CycleSearch extends Cycle
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'code' => $this->code,
             'lang_id' => $this->lang_id,
             'icon_id' => $this->icon_id,
             'owner_id' => $this->owner_id

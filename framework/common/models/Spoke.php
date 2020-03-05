@@ -11,22 +11,11 @@ use noam148\imagemanager\models\ImageManager;
 /**
  * This is the model class for table "spoke".
  *
- * @property int $id
- * @property int|null $lang_id Language ID
  * @property int|null $element_id Element ID
- * @property int|null $icon_id Spoke icon ID
- * @property string $name Spoke localized name
- * @property string $direction Spoke direction
- * @property string|null $desc Spoke localized description
- * @property int $owner_id Owner
- * @property string $created_at Creation time
- * @property string $updated_at Last update time
  *
  * @property Lair[] $lairs
  * @property Element $element
  * @property string $elementLabel
- * @property ImageManager $icon
- * @property User $owner
  */
 class Spoke extends CrudModel
 {
@@ -44,13 +33,16 @@ class Spoke extends CrudModel
     public function rules()
     {
         return [
+            [['name', 'direction', 'code'], 'required'],
             [['lang_id', 'element_id', 'icon_id', 'owner_id'], 'integer'],
-            [['name', 'direction'], 'required'],
             [['desc'], 'string'],
+            [['code'], 'match', 'pattern' => '/^[a-z]+$/', 'message' => 'Code can only contain little latin characters'],
             [['created_at', 'updated_at'], 'safe'],
             [['name'], 'string', 'max' => 20],
+            [['code'], 'string', 'max' => 10],
             [['direction'], 'string', 'max' => 5],
             [['name'], 'unique'],
+            [['code', 'lang_id'], 'unique', 'targetAttribute' => ['code', 'lang_id']],
             [['direction', 'lang_id'], 'unique', 'targetAttribute' => ['direction', 'lang_id']],
             [['element_id'], 'exist', 'skipOnError' => true, 'targetClass' => Element::class, 'targetAttribute' => ['element_id' => 'id']],
             [['icon_id'], 'exist', 'skipOnError' => true, 'targetClass' => ImageManager::class, 'targetAttribute' => ['icon_id' => 'id']],
@@ -66,6 +58,7 @@ class Spoke extends CrudModel
     {
         return [
             'id',
+            'code',
             'langLabel',
             'elementLabel',
             'imagePath:image',
@@ -83,22 +76,11 @@ class Spoke extends CrudModel
      */
     public function attributeLabels()
     {
-        return [
-            'id' => Yii::t('app', 'ID'),
-            'lang_id' => Yii::t('app', 'Language'),
-            'langLabel' => Yii::t('app', 'Language'),
+        return array_merge(parent::attributeLabels(),[
             'element_id' => Yii::t('app', 'Element'),
             'elementLabel' => Yii::t('app', 'Element'),
-            'icon_id' => Yii::t('app', 'Icon'),
-            'imagePath' => Yii::t('app', 'Icon'),
-            'name' => Yii::t('app', 'Name'),
-            'direction' => Yii::t('app', 'Direction'),
-            'desc' => Yii::t('app', 'Desc'),
-            'owner_id' => Yii::t('app', 'Owner'),
-            'ownerName' => Yii::t('app', 'Owner'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
-        ];
+            'direction' => Yii::t('app', 'Direction')
+        ]);
     }
 
     /**
@@ -127,16 +109,6 @@ class Spoke extends CrudModel
     public function getElementLabel() : string
     {
         return ($element = $this->element) ? $element->name : '';
-    }
-
-    /**
-     * Gets query for [[Icon]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIcon()
-    {
-        return $this->hasOne(ImageManager::class, ['id' => 'icon_id']);
     }
 
     /**
