@@ -118,7 +118,7 @@ abstract class CrudModel extends ActiveRecord {
             'imagePath' => Yii::t('app', 'Icon'),
             'name' => Yii::t('app', 'Name'),
             'direction' => Yii::t('app', 'Direction'),
-            'desc' => Yii::t('app', 'Desc'),
+            'desc' => Yii::t('app', 'Description'),
             'owner_id' => Yii::t('app', 'Owner'),
             'ownerName' => Yii::t('app', 'Owner'),
             'created_at' => Yii::t('app', 'Created At'),

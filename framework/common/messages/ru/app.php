@@ -47,7 +47,7 @@ return [
     'Cycle' => 'Цикл',
     'Cycles' => 'Циклы',
     'Delete' => 'Удалить',
-    'Desc' => 'Описание',
+    'Description' => 'Описание',
     'Direction' => 'Направление',
     'Element' => 'Стихия',
     'Elements' => 'Стихии',

@@ -44,7 +44,7 @@ return [
     'Cycle' => '',
     'Cycles' => '',
     'Delete' => '',
-    'Desc' => '',
+    'Description' => '',
     'Direction' => '',
     'Element' => '',
     'Elements' => '',
