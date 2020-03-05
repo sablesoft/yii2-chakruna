@@ -1,7 +1,11 @@
 <?php
 
 use yii\db\Migration;
+use common\models\User;
 
+/**
+ * Class m130524_201442_init
+ */
 class m130524_201442_init extends Migration
 {
     public function up()
@@ -19,8 +23,9 @@ class m130524_201442_init extends Migration
             'password_hash' => $this->string()->notNull(),
             'password_reset_token' => $this->string()->unique(),
             'email' => $this->string()->notNull()->unique(),
+            'dob' => $this->timestamp()->null()->comment("Day and time of Birth"),
 
-            'status' => $this->smallInteger()->notNull()->defaultValue(10),
+            'status' => $this->smallInteger()->notNull()->defaultValue(User::STATUS_ACTIVE),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);

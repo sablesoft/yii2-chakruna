@@ -22,6 +22,7 @@
         "yiisoft/yii2-debug": "^2.0",
         "yiisoft/yii2-smarty": "^2.0",
         "sablerom/yii2-vue": "^1.0",
+        "noam148/yii2-image-manager": "*",
         "codemix/yii2-localeurls": "^1.7",
         "fxp/composer-asset-plugin": "^1.1"
     },
