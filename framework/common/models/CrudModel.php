@@ -36,6 +36,7 @@ use common\behavior\DateFilterBehavior;
  * @property array $columns
  * @property array $codes
  * @property array $codesFilter
+ * @property array $freeCodes
  *
  * @method ActiveQuery|LanguageQuery getLang();
  * @method string getLangLabel();
@@ -76,10 +77,24 @@ abstract class CrudModel extends ActiveRecord {
     /**
      * @return array
      */
-    public function getCodesFilter() : array
+    public function getFreeCodes() : array
+    {
+        $collection = static::findAll(['lang_id' => Language::current()->id]);
+        $denied = ArrayHelper::getColumn($collection, 'code');
+        return $this->getCodesFilter(
+            array_diff($this->getCodes(), $denied)
+        );
+    }
+
+    /**
+     * @param array $codes
+     * @return array
+     */
+    public function getCodesFilter(array $codes = []) : array
     {
         $filter = [];
-        foreach( $this->getCodes() as $code ) {
+        $codes = $codes ?: $this->getCodes();
+        foreach( $codes as $code ) {
             $filter[$code] = $code;
         }
 

@@ -39,6 +39,14 @@ class Language extends CrudModel
     }
 
     /**
+     * @return array
+     */
+    public function getFreeCodes(): array
+    {
+        return [];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function rules()
