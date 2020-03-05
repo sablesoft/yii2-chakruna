@@ -16,6 +16,7 @@ class m200305_055353_create_lair_table extends Migration
         $table = $this->table;
         $this->createTable($table, [
             'id'    => $this->primaryKey(),
+            'code'       => $this->string(10)->notNull()->comment('Lair code'),
             'lang_id'    => $this->integer()->notNull()->comment('Language ID'),
             'cycle_id'   => $this->integer()->notNull()->comment('Cycle ID'),
             'spoke_id'   => $this->integer()->notNull()->comment('Spoke ID'),
@@ -30,10 +31,14 @@ class m200305_055353_create_lair_table extends Migration
             'updated_at'    => $this->timestamp()->notNull()->defaultExpression('CURRENT_TIMESTAMP')
                 ->comment('Last update time')
         ], 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
-        // create unique type translate:
+        // create unique translate index:
         $this->createIndex(
             "idx-unique-$table", $table,
             ['cycle_id', 'spoke_id', 'lang_id'], true
+        );
+        $this->createIndex(
+            "idx-unique-$table-code", $table,
+            ['code', 'lang_id'], true
         );
         // add foreign keys for table `lair`:
         $this->addForeignKey("fk-$table-lang", $table, 'lang_id', 'language', 'id');

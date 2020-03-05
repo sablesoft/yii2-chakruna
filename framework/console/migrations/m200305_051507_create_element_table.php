@@ -17,6 +17,7 @@ class m200305_051507_create_element_table extends Migration
         $table = $this->table;
         $this->createTable($table, [
             'id' => $this->primaryKey(),
+            'code'       => $this->string(10)->notNull()->comment('Element code'),
             'lang_id'    => $this->integer()->notNull()->comment('Language ID'),
             'icon_id'    => $this->integer()->null()->unsigned()->comment('Element icon ID'),
             'name'       => $this->string(20)->notNull()->unique()->comment('Element localized name'),
@@ -28,6 +29,11 @@ class m200305_051507_create_element_table extends Migration
             'updated_at'    => $this->timestamp()->notNull()->defaultExpression('CURRENT_TIMESTAMP')
                 ->comment('Last update time')
         ],'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
+        // create unique translate index:
+        $this->createIndex(
+            "idx-unique-$table-code", $table,
+            ['lang_id', 'code'], true
+        );
         // add foreign keys for table `element`:
         $this->addForeignKey("fk-$table-lang", $table, 'lang_id', 'language', 'id');
         $this->addForeignKey("fk-$table-owner", $table, 'owner_id', 'user', 'id');

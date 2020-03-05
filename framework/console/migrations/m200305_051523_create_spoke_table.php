@@ -16,6 +16,7 @@ class m200305_051523_create_spoke_table extends Migration
         $table = $this->table;
         $this->createTable($table, [
             'id' => $this->primaryKey(),
+            'code' => $this->string('10')->notNull()->comment('Spoke code'),
             'lang_id'    => $this->integer()->comment('Language ID'),
             'element_id' => $this->integer()->comment('Element ID'),
             'icon_id'    => $this->integer()->null()->unsigned()->comment('Spoke icon ID'),
@@ -29,10 +30,14 @@ class m200305_051523_create_spoke_table extends Migration
             'updated_at'    => $this->timestamp()->notNull()->defaultExpression('CURRENT_TIMESTAMP')
                 ->comment('Last update time')
         ],'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
-        // create unique type translate:
+        // create unique translate index:
         $this->createIndex(
             "idx-unique-$table-direction", $table,
             ['direction', 'lang_id'], true
+        );
+        $this->createIndex(
+            "idx-unique-$table-code", $table,
+            ['code', 'lang_id'], true
         );
         // add foreign keys for table `cycle`:
         $this->addForeignKey("fk-$table-lang", $table, 'lang_id', 'language', 'id');
