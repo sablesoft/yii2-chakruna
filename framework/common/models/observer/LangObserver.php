@@ -15,6 +15,10 @@ class LangObserver
     public static function beforeRequest( Event $event ) {
         /** @var Application $app */
         $app = $event->sender;
-        $app->urlManager->languages = Language::getDropDownList(['to' => 'code'])[0];
+        try {
+            $app->urlManager->languages = Language::getDropDownList(['to' => 'code'])[0];
+        } catch (Exception $e) {
+            \Yii::error($e->getMessage(), 'lang');
+        }
     }
 }

@@ -18,6 +18,7 @@
  */
 return [
     ' and ' => '',
+    'Logout' => '',
     '"{attribute}" does not support operator "{operator}".' => '',
     '(not set)' => '',
     'Action not found.' => '',

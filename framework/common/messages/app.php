@@ -18,6 +18,7 @@
  */
 return [
     'Login' => '',
+    'Logout' => '',
     'Powered by' => '',
     'Are you sure you want to delete this item?' => '',
     'Cannot delete default!' => '',
