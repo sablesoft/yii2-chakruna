@@ -18,7 +18,7 @@ return [
     ],
     'urlManager' => [
         'class' => 'codemix\localeurls\UrlManager',
-        'languages' => ['en', 'ru'],
+        'languages' => ['en'],
         'enablePrettyUrl' => true,
         'enableStrictParsing' => false,
         'enableDefaultLanguageUrlCode' => true,
