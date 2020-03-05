@@ -21,6 +21,7 @@ services:
   db:
     image: mysql:5.7
     container_name: chakrunadb
+    working_dir: /dump
     volumes:
       - ./log:/var/log/mysql
       - ./docker/dump:/dump

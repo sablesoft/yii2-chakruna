@@ -4,6 +4,7 @@ namespace common\models\observer;
 
 use yii\base\Event;
 use yii\base\Application;
+use yii\db\Exception;
 use common\models\Language;
 
 /**
