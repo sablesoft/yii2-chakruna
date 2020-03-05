@@ -17,10 +17,15 @@ use noam148\imagemanager\components\ImageManagerInputWidget;
 
     <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'lang_id')->dropDownList(
-        ...Language::getDropDownList([
-        'prompt' => Yii::t('app', 'Select language')
-    ])); ?>
+    <?php if( \Yii::$app->user->can('admin')): ?>
+        <?= $form->field($model, 'lang_id')->dropDownList(
+            ...Language::getDropDownList([
+            'prompt' => Yii::t('app', 'Select language')
+        ])); ?>
+    <?php else: ?>
+        <?= $form->field($model, 'lang_id')
+            ->hiddenInput(['value' => Language::current()->id ])->label(false); ?>
+    <?php endif; ?>
 
     <?= $form->field($model, 'element_id')->dropDownList(
         ...Element::getDropDownList([
