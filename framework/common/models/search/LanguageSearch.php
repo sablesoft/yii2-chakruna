@@ -23,6 +23,26 @@ class LanguageSearch extends Language
     }
 
     /**
+     * @return array
+     */
+    public function getColumns(): array
+    {
+        return [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+            'code',
+            'name',
+            'native_name',
+            'owner_id',
+            //'created_at',
+            //'updated_at',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function scenarios()

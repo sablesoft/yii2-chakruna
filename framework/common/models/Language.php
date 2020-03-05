@@ -55,6 +55,38 @@ class Language extends CrudModel
     }
 
     /**
+     * @return array
+     */
+    public function getColumns(): array
+    {
+        return [
+            'id',
+            'code',
+            'name',
+            'native_name',
+            'owner_id',
+            'created_at:datetime',
+            'updated_at:datetime',
+        ];
+    }
+
+    /**
+     * @return $this|LanguageQuery|\yii\db\ActiveQuery
+     */
+    public function getLang()
+    {
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLangLabel()
+    {
+        return $this->name;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function attributeLabels()
