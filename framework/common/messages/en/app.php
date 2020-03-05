@@ -17,6 +17,18 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'sun right'     => 'Spring',
+    'sun top'       => 'Summer',
+    'sun left'      => 'Autumn',
+    'sun bottom'    => 'Winter',
+    'moon right'    => 'Growing',
+    'moon top'      => 'Full',
+    'moon left'     => 'Warming',
+    'moon bottom'   => 'New',
+    'earth right'   => 'Morning',
+    'earth top'     => 'Day',
+    'earth left'    => 'Evening',
+    'earth bottom'  => 'Night',
     'Login' => '',
     'Powered by' => '',
     'Are you sure you want to delete this item?' => '',

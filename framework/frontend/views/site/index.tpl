@@ -12,7 +12,7 @@
                     <i class="glyphicon glyphicon-{$config['icon']}"></i>
                 </div>
             {foreach from=['right', 'top', 'left', 'bottom'] key=i item=part}
-                <span class="label-wheel label-wheel-{$part} noselect">{Yii::t('docker', "$wheel $part")}</span>
+                <span class="label-wheel label-wheel-{$part} noselect">{Yii::t('app', "$wheel $part")}</span>
             {/foreach}
             </div>
             <div class="caption">
