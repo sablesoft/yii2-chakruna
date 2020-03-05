@@ -43,7 +43,13 @@ return [
                 '/about' => '/site/about',
                 '/login' => '/site/login',
                 '/signup' => '/site/signup',
-                '/countact' => '/site/contact'
+                '/countact' => '/site/contact',
+                // '/api/<controller>' => '/<controller>',
+                [
+                    //'pattern' => '/api/users',
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'user'
+                ]
             ]
         ],
     ],
