@@ -1,12 +1,16 @@
 <?php
 namespace common\models;
 
+use yii\db\ActiveQuery;
 use yii\db\Exception;
 use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
-use common\behavior\OwnerBehavior;
-use common\behavior\ImageBehavior;
 use yii\behaviors\AttributeBehavior;
+use common\behavior\LangBehavior;
+use common\behavior\ImageBehavior;
+use common\behavior\OwnerBehavior;
+use common\models\query\LanguageQuery;
+use common\behavior\DateFilterBehavior;
 
 
 /**
@@ -22,9 +26,15 @@ use yii\behaviors\AttributeBehavior;
  * @property bool $isCheckDefault
  * @property User|null $ownerUser
  * @property string|null $imagePath
+ * @property Language|null $lang
+ * @property string $langLabel
+ * @property array $columns
  *
+ * @method ActiveQuery|LanguageQuery getLang();
+ * @method string getLangLabel();
  * @method bool isOwner( int $userId );
  * @method string|null getImagePath( $options = [] );
+ * @method ActiveQuery applyDateFilter( string $attribute, ActiveQuery $query );
  */
 abstract class CrudModel extends ActiveRecord {
 
@@ -36,6 +46,16 @@ abstract class CrudModel extends ActiveRecord {
      */
     public function getIsCheckDefault() : bool {
         return (bool) $this->checkDefault;
+    }
+
+    /**
+     * Columns for view and index crud pages
+     *
+     * @return array
+     */
+    public function getColumns() : array
+    {
+        return [];
     }
 
     /**
@@ -58,6 +78,13 @@ abstract class CrudModel extends ActiveRecord {
                 'imageField' => 'icon_id',
                 'imageWidth' => 30,
                 'imageHeight' => 30
+            ],
+            'lang' => [
+                'class' => LangBehavior::class,
+                'langField' => 'lang_id'
+            ],
+            'dateFilter' => [
+                'class' => DateFilterBehavior::class
             ],
             'created.save' => [
                 'class'      => AttributeBehavior::class,
@@ -112,7 +139,7 @@ abstract class CrudModel extends ActiveRecord {
             $query = $query->where( $where );
         $models = $query->all();
         $from = !empty( $config['from'] )? $config['from'] : 'id';
-        $to = !empty( $config['to'] )? $config['to'] : 'label';
+        $to = !empty( $config['to'] )? $config['to'] : 'name';
         $items = ArrayHelper::map( $models, $from, $to );
         // prepare params:
         $params = [];
