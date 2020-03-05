@@ -1,6 +1,7 @@
 <?php
 
 use yii\db\Migration;
+use common\models\User;
 
 /**
  * Handles the creation of table `{{%language}}`.
@@ -28,6 +29,29 @@ class m200217_172239_create_language_table extends Migration
         ], 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB');
         // add foreign keys for table `language`:
         $this->addForeignKey("fk-$table-owner", $table, 'owner_id', 'user', 'id');
+
+        if (($systemUser = Yii::$app->params['systemUser']) &&
+            ($systemLanguages = Yii::$app->params['systemLanguages'])) {
+            echo "System user checking... ";
+            if (!empty($systemUser['username']) && $user = User::findOne(['username' => $systemUser['username']])) {
+                echo "...done!\r\n";
+                foreach($systemLanguages as $data) {
+                    $data['owner_id'] = $user->id;
+                    try {
+                        if (Yii::$app->db->createCommand()->insert('language', $data)->execute()) {
+                            $code = $data['code'];
+                            echo "System language '$code' installed!\r\n";
+                        } else {
+                            echo "We have some error! Language '$code' not installed!\r\n";
+                        }
+                    } catch ( \Exception $e ) {
+                        echo "Insert error: " .  $e->getMessage() . "\r\n";
+                    }
+                }
+            } else {
+                echo "WARNING! System user not found! System languages installation skipped!\r\n";
+            }
+        }
     }
 
     /**

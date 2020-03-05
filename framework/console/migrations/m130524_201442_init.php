@@ -2,6 +2,7 @@
 
 use yii\db\Migration;
 use common\models\User;
+use frontend\models\SignupForm;
 
 /**
  * Class m130524_201442_init
@@ -29,6 +30,26 @@ class m130524_201442_init extends Migration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
+
+        // check system user data in app parameters:
+        if ($userData = Yii::$app->params['systemUser']) {
+            echo "Create system user from app params...\r\n";
+            try {
+                $form = new SignupForm();
+                $form->load($userData, '');
+                if($user = $form->signup()) {
+                    echo "System user '$user->username' created!";
+                } else {
+                    foreach( $form->getErrorSummary(true) as $error) {
+                        echo $error . "\r\n";
+                    }
+                }
+            } catch (Exception $e ) {
+                Yii::error($e->getMessage(), 'migration');
+                echo $e->getMessage() ."\r\n";
+            }
+        }
+
     }
 
     public function down()
