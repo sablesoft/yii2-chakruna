@@ -83,7 +83,7 @@ class LairSearch extends Lair
 //                'filter' => false
 //            ],
             'name',
-//            'period',
+            'period',
             //'desc:ntext',
 //            [
 //                'attribute' => 'owner_id',

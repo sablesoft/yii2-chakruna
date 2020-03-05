@@ -79,7 +79,7 @@ return [
     'just now' => '',
     'the input value' => '',
     '{attribute} "{value}" has already been taken.' => '',
-    '{attribute} cannot be blank.' => '',
+    '{attribute} cannot be blank.' => 'Значение {attribute} не может быть пустым',
     '{attribute} contains wrong subnet mask.' => '',
     '{attribute} is invalid.' => '',
     '{attribute} is not a valid URL.' => '',

@@ -12,19 +12,29 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?php // code field: ?>
-    <?php if(Yii::$app->controller->action->id == 'create'): ?>
-        <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
-    <?php else: ?>
-        <?= $form->field($model, 'code')->textInput(['maxlength' => true, 'disabled' => 'disabled']) ?>
-    <?php endif; ?>
+    <div class="col-sm-2">
+        <?php // code field: ?>
+        <?php if(Yii::$app->controller->action->id == 'create'): ?>
+            <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
+        <?php else: ?>
+            <?= $form->field($model, 'code')->textInput(['maxlength' => true, 'disabled' => 'disabled']) ?>
+        <?php endif; ?>
+    </div>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+    <div class="col-sm-4">
+        <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+    </div>
 
-    <?= $form->field($model, 'native_name')->textInput(['maxlength' => true]) ?>
+    <div class="col-sm-4">
+        <?= $form->field($model, 'native_name')->textInput(['maxlength' => true]) ?>
+    </div>
 
-    <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
+
+    <div class="col-sm-2">
+        <br>
+        <div class="form-group">
+            <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
+        </div>
     </div>
 
     <?php ActiveForm::end(); ?>
