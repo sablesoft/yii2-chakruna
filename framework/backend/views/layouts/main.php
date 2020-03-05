@@ -9,6 +9,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
+use common\widgets\LanguageNav;
 
 AppAsset::register($this);
 ?>
@@ -37,6 +38,10 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'Cycles', 'url' => ['/cycle/index']],
+        ['label' => 'Elements', 'url' => ['/element/index']],
+        ['label' => 'Spokes', 'url' => ['/spoke/index']],
+        ['label' => 'Lairs', 'url' => ['/lair/index']]
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -50,6 +55,7 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
     }
+    echo LanguageNav::widget(['options' => ['class' => 'navbar-nav navbar-right']]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,

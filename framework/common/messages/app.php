@@ -63,5 +63,5 @@ return [
     'Update Lair: {name}' => '',
     'Update Language: {name}' => '',
     'Update Spoke: {name}' => '',
-    'Updated At' => ''
+    'Updated At' => '',
 ];

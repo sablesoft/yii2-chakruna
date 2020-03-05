@@ -111,7 +111,7 @@ class SiteController extends Controller {
      * @return mixed
      */
     public function actionLogin() {
-        $this->view->title = Yii::t('docker', 'Login');
+        $this->view->title = Yii::t('app', 'Login');
         $this->view->params['breadcrumbs'][] = $this->view->title;
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();

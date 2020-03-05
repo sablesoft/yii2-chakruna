@@ -23,7 +23,7 @@ class LanguageNav extends \yii\bootstrap\Nav {
         array_unshift($params, '/' . $route);
 
         $items = ['<li class="dropdown-header">' .
-            Yii::t('docker', 'Choose your language') . '</li>'];
+            Yii::t('app', 'Choose your language') . '</li>'];
         foreach (Yii::$app->urlManager->languages as $language) {
             $isWildcard = substr($language, -2) === '-*';
             if (
@@ -76,8 +76,8 @@ class LanguageNav extends \yii\bootstrap\Nav {
     public static function label( string $code ) {
         if (self::$_labels === null) {
             self::$_labels = [
-                'ru' => Yii::t('docker', 'Russian'),
-                'en' => Yii::t('docker', 'English'),
+                'ru' => Yii::t('app', 'Russian'),
+                'en' => Yii::t('app', 'English'),
             ];
         }
 
