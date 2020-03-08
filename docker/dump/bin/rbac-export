@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
 mysqldump -u${MYSQL_USER} -p${MYSQL_PASSWORD} ${MYSQL_DATABASE} auth_item auth_item_child auth_rule -vvv > rbac.sql;
-
