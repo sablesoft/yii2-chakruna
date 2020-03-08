@@ -23,7 +23,7 @@ Event::on( Application::class,
 );
 
 // access handler:
-//Event::on( Controller::class,
-//    Controller::EVENT_BEFORE_ACTION,
-//    ['common\rbac\AccessObserver', 'beforeAction']
-//);
+Event::on( Controller::class,
+    Controller::EVENT_BEFORE_ACTION,
+    ['common\rbac\AccessObserver', 'beforeAction']
+);
