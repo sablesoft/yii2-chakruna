@@ -18,15 +18,15 @@
 {$this->beginBody()}
 
 <div class="wrap">
-    {include '@frontend/views/layouts/navbar.tpl'}
+    {include '@common/views/layouts/navbar.tpl'}
     <div id="main-container" class="container">
-        {include '@frontend/views/layouts/breadcrumbs.tpl'}
+        {include '@common/views/layouts/breadcrumbs.tpl'}
         {Alert::widget()}
         {$content}
     </div>
 </div>
 
-{include '@frontend/views/layouts/footer.tpl'}
+{include '@common/views/layouts/footer.tpl'}
 
 {$this->endBody()}
 </body>

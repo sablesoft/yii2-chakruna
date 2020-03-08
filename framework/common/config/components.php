@@ -25,9 +25,14 @@ return [
         'showScriptName' => false,
         'ignoreLanguageUrlPatterns' => [
             '#^api/#' => '#^api/#',
-            '#^user#' => '#^user#',
             '#^gii#' => '#^gii#'
         ],
+        'rules' => [
+            '/' => '/site/index',
+            '/login' => '/user/security/login',
+            '/logout' => '/user/security/logout',
+            '/signup' => '/user/registration/register',
+        ]
     ],
     'assetManager' => [
         'linkAssets' => true

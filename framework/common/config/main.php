@@ -2,6 +2,7 @@
 return [
     'name' => 'Chakruna',
     'language' => 'en',
+    'layout' => '@common/views/layouts/main.tpl',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',

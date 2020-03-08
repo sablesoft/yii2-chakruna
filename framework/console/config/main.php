@@ -7,7 +7,7 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'docker-console',
+    'id' => 'console',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'console\controllers',
@@ -20,6 +20,9 @@ return [
             'class' => 'yii\console\controllers\FixtureController',
             'namespace' => 'common\fixtures',
           ],
+    ],
+    'modules' => [
+        'rbac' => 'dektrium\rbac\RbacConsoleModule'
     ],
     'components' => [
         'log' => [

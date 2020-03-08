@@ -9,7 +9,7 @@
     ]
 ])|void}
 {LanguageNav::widget([
-    'options' => ['class' => 'navbar-nav navbar-right']
+    'options' => ['class' => 'navbar-nav navbar-left']
 ])}
 {Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-right'],
