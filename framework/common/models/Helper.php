@@ -160,6 +160,7 @@ class Helper {
     /**
      * @param string $key
      * @param bool $checkNamespace
+     * @param bool $asModels
      * @return mixed
      */
     public static function getSettings( string $key, bool $checkNamespace = false, $asModels = false ) {
