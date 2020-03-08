@@ -17,6 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Admin' => '',
     'Login' => '',
     'Logout' => '',
     'Powered by' => '',
@@ -24,6 +25,8 @@ return [
     'Cannot delete default!' => '',
     'Choose your language' => '',
     'Code' => '',
+    'Control' => '',
+    'Content' => '',
     'Create Cycle' => '',
     'Create Element' => '',
     'Create Lair' => '',
@@ -43,6 +46,7 @@ return [
     'Lairs' => '',
     'Language' => '',
     'Languages' => '',
+    'Media' => '',
     'Name' => '',
     'Native Name' => '',
     'Owner' => '',
@@ -55,6 +59,7 @@ return [
     'Select element' => '',
     'Select language' => '',
     'Select spoke' => '',
+    'Signup' => '',
     'Spoke' => '',
     'Spokes' => '',
     'The requested page does not exist.' => '',
