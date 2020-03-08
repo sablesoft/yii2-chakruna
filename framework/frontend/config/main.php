@@ -7,51 +7,19 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'docker-frontend',
-    'layout' => 'main.tpl',
+    'id' => 'frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'components' => [
-        'request' => [
-            'csrfParam' => '_csrf-frontend'
-        ],
+    'components' => require( __DIR__ . '/components.php'),
+    'params' => $params,
+    'modules' => [
         'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true]
-        ],
-        'session' => [
-            // this is the name of the session cookie used for login on the frontend
-            'name' => 'advanced-frontend'
-        ],
-        'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning']
-                ]
+            // following line will restrict access to admin controller from frontend application
+            'as frontend' => [
+                'class' => 'dektrium\user\filters\FrontendFilter',
+                'controllers' => ['admin']
             ]
-        ],
-        'errorHandler' => [
-            'errorAction' => 'site/error'
-        ],
-        'urlManager' => [
-            'rules' => [
-                '/' => '/site/index',
-                '/about' => '/site/about',
-                '/login' => '/site/login',
-                '/signup' => '/site/signup',
-                '/countact' => '/site/contact',
-                // '/api/<controller>' => '/<controller>',
-                [
-                    //'pattern' => '/api/users',
-                    'class' => 'yii\rest\UrlRule',
-                    'controller' => 'user'
-                ]
-            ]
-        ],
-    ],
-    'params' => $params
+        ]
+    ]
 ];

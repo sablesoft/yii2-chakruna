@@ -1,8 +1,7 @@
 <?php
 
 use yii\db\Migration;
-use common\models\User;
-use frontend\models\SignupForm;
+use dektrium\user\models\RegistrationForm;
 
 /**
  * Class m130524_201442_init
@@ -11,34 +10,19 @@ class m130524_201442_init extends Migration
 {
     public function up()
     {
-        $tableOptions = null;
-        if ($this->db->driverName === 'mysql') {
-            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
-            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
-        }
-
-        $this->createTable('{{%user}}', [
-            'id' => $this->primaryKey(),
-            'username' => $this->string()->notNull()->unique(),
-            'auth_key' => $this->string(32)->notNull(),
-            'password_hash' => $this->string()->notNull(),
-            'password_reset_token' => $this->string()->unique(),
-            'email' => $this->string()->notNull()->unique(),
-            'dob' => $this->timestamp()->null()->comment("Day and time of Birth"),
-
-            'status' => $this->smallInteger()->notNull()->defaultValue(User::STATUS_ACTIVE),
-            'created_at' => $this->integer()->notNull(),
-            'updated_at' => $this->integer()->notNull(),
-        ], $tableOptions);
+        echo "Install Dektrium user migrations...\r\n";
+        shell_exec("/var/www/html/yii migrate/up --migrationPath=@vendor/dektrium/yii2-user/migrations --interactive=0");
+        echo "Install Yii2 RBAC migrations...\r\n";
+        shell_exec("/var/www/html/yii migrate/up --migrationPath=@yii/rbac/migrations --interactive=0");
 
         // check system user data in app parameters:
         if ($userData = Yii::$app->params['systemUser']) {
             echo "Create system user from app params...\r\n";
             try {
-                $form = new SignupForm();
+                $form = new RegistrationForm();
                 $form->load($userData, '');
-                if($user = $form->signup()) {
-                    echo "System user '$user->username' created!";
+                if($form->register()) {
+                    echo "System user '$form->username' created!";
                 } else {
                     foreach( $form->getErrorSummary(true) as $error) {
                         echo $error . "\r\n";
@@ -54,6 +38,8 @@ class m130524_201442_init extends Migration
 
     public function down()
     {
-        $this->dropTable('{{%user}}');
+        echo "WARNING! You must manually use in cli: \r\n";
+        echo "/var/www/html/yii migrate/down ?? --migrationPath=@vendor/dektrium/yii2-user/migrations --interactive=0\r\n";
+        echo "/var/www/html/yii migrate/down ?? --migrationPath=@yii/rbac/migrations --interactive=0\r\n";
     }
 }

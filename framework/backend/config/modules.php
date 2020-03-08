@@ -8,6 +8,13 @@ return [
         'canRemoveImage' => function() {
             return true;
         },
+        'user' => [
+            // following line will restrict access to profile, recovery, registration and settings controllers from backend
+            'as backend' => [
+                'class' => 'dektrium\user\filters\BackendFilter',
+                'controllers' => ['profile', 'recovery', 'registration', 'settings']
+            ],
+        ],
         'deleteOriginalAfterEdit' => false, // false: keep original image after edit. true: delete original image after edit
         // Set if blameable behavior is used, if it is, callable function can also be used
         'setBlameableBehavior' => false,
