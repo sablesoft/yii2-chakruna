@@ -1,0 +1,20 @@
+{
+	"lang":"en", "boxName":"Default EN Box",
+	"defImages":true,"uniSpokes":true,"uniPowers":true,"caseSpokes":false,"casePowers":false,"caseWheels":false,
+	"sexWheels":false,"sexSpokes":false,"sexPowers":false,
+	"wheel-nom":
+		{
+			"earth":"Earth",
+			"moon":"Moon",
+			"sun":"Sun"
+		},
+	"wheel-gen":null, "spoke-sex":null, "spoke-sex-sun":null, "spoke-sex-moon":null, "spoke-sex-earth":null,
+	"spoke-nom": ["Dragon","Hunter","Serpent","Buddha","Wind","Jaguar","Kali","Lila","Maya","Eagle","Healer","Shaman","Seed","Hero","Star","Helix","Dragon"],
+	"spoke-nom-sun":null,"spoke-nom-moon":null,"spoke-nom-earth":null,
+	"spoke-gen":null,"spoke-gen-sun":null,"spoke-gen-moon":null,"spoke-gen-earth":null,
+	"power-sex":null,"power-sex-sun":null,"power-sex-moon":null,"power-sex-earth":null,
+	"power-nom":["Rule","Stalking","Instinct","Silence","Spirit","Eternity","Death","Performance","Dreaming","Vision","Alignment","Will","Knowledge","Perfection","Flash","Adoption","Rule"],
+	"power-nom-sun":null,"power-nom-moon":null,"power-nom-earth":null,"power-gen":null,"power-gen-sun":null,"power-gen-moon":null,"power-gen-earth":null,
+	"src":null,"alt":null,"packType":"boxes",
+	"file":"defaultEN_box.json","key":"defaultEN"
+}

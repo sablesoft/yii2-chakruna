@@ -1,0 +1,22 @@
+{"lang":"ru",
+"boxName":"Стандартный RU Набор",
+"defImages":true, "uniSpokes":true, "uniPowers":true, "caseSpokes":true, "casePowers":true, "caseWheels":true,
+"sexWheels":true,"sexSpokes":true,"sexPowers":true,
+"wheel-nom":{
+		"earth":["Земное","Земной","Земная"],
+		"moon":["Лунное","Лунный","Лунная"],
+		"sun":["Солнечное","Солнечный","Солнечная"]},
+"wheel-gen":{
+		"earth":["Земного","Земного","Земной"],
+		"moon":["Лунного","Лунного","Лунной"],
+		"sun":["Солнечного","Солнечного","Солнечной"]},
+"spoke-sex":[1,1,1,1,1,1,2,2,2,1,1,1,0,1,2,2,1],
+"spoke-sex-sun":null, "spoke-sex-moon":null,"spoke-sex-earth":null,
+"spoke-nom":["Дракон","Охотник","Змей","Будда","Ветер","Ягуар","Кали","Лила","Майя","Орёл","Целитель","Шаман","Зерно","Герой","Звезда","Улитка","Дракон"],
+"spoke-nom-sun":null,"spoke-nom-moon":null,"spoke-nom-earth":null,
+"spoke-gen":["Дракона","Охотника","Змея","Будды","Ветра","Ягуара","Кали","Лилы","Майи","Орла","Целителя","Шамана","Зерна","Героя","Звезды","Улитки","Дракона"],
+"spoke-gen-sun":null,"spoke-gen-moon":null,"spoke-gen-earth":null,"power-sex":[2,1,1,0,1,2,2,0,0,0,2,2,0,2,2,0,2],"power-sex-sun":null,"power-sex-moon":null,"power-sex-earth":null,
+"power-nom":["Гармония","Сталкинг","Инстинкт","Безмолвие","Дух","Вечность","Смерть","Неделание","Сновидение","Видение","Сонастройка","Воля","Знание","Безупречность","Искра","Принятие","Гармония"],
+"power-nom-sun":null,"power-nom-moon":null,"power-nom-earth":null,
+"power-gen":["Гармонии","Сталкинга","Инстинкта","Безмолвия","Духа","Вечности","Смерти","Неделания","Сновидения","Видения","Сонастройки","Воли","Знания","Безупречности","Искры","Принятия","Гармонии"],
+"power-gen-sun":null,"power-gen-moon":null,"power-gen-earth":null,"src":null,"alt":null,"packType":"boxes","file":"defaultRU_box.json","key":"defaultRU"}
