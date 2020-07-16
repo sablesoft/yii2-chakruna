@@ -22,7 +22,6 @@
         "yiisoft/yii2-debug": "^2.0",
         "yiisoft/yii2-smarty": "^2.0",
         "sablerom/yii2-vue": "^1.0",
-        "dektrium/yii2-rbac": "dev-master",
         "dektrium/yii2-user": "dev-master",
         "noam148/yii2-image-manager": "*",
         "codemix/yii2-localeurls": "^1.7",

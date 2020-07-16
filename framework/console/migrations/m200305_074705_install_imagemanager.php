@@ -16,7 +16,7 @@ class m200305_074705_install_imagemanager extends Migration
     public function safeUp()
     {
         echo "Install ImageManager migrations...\r\n";
-        shell_exec("/var/www/html/yii migrate --migrationPath=@noam148/imagemanager/migrations --interactive=0");
+        shell_exec("/var/www/html/yii migrate-image --interactive=0");
         $field = self::ICON_FIELD;
         echo "Create foreign keys to ImageManager table...\r\n";
         foreach($this->tables as $table) {

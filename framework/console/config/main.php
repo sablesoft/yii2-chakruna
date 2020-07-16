@@ -19,10 +19,24 @@ return [
         'fixture' => [
             'class' => 'yii\console\controllers\FixtureController',
             'namespace' => 'common\fixtures',
-          ],
-    ],
-    'modules' => [
-        'rbac' => 'dektrium\rbac\RbacConsoleModule'
+        ],
+        // app migrations
+        'migrate' => [
+            'class' => 'yii\console\controllers\MigrateController',
+            'migrationPath' => '@app/migrations',
+            'migrationTable' => 'migration',
+        ],
+        // rbac migrations
+        'migrate-rbac' => [
+            'class' => 'yii\console\controllers\MigrateController',
+            'migrationPath' => '@yii/rbac/migrations',
+            'migrationTable' => 'migration',
+        ],
+        'migrate-image' => [
+            'class' => 'yii\console\controllers\MigrateController',
+            'migrationPath' => '@noam148/imagemanager/migrations',
+            'migrationTable' => 'migration',
+        ]
     ],
     'components' => [
         'log' => [

@@ -19,7 +19,7 @@ services:
 
   # dev mysql db:
   db:
-    image: mysql:5.7
+    image: mysql
     container_name: chakrunadb
     working_dir: /dump
     volumes:

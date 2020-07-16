@@ -12,14 +12,5 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => require( __DIR__ . '/components.php'),
-    'params' => $params,
-    'modules' => [
-        'user' => [
-            // following line will restrict access to admin controller from frontend application
-            'as frontend' => [
-                'class' => 'dektrium\user\filters\FrontendFilter',
-                'controllers' => ['admin']
-            ]
-        ]
-    ]
+    'params' => $params
 ];

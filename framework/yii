@@ -19,6 +19,9 @@ $config = yii\helpers\ArrayHelper::merge(
     require __DIR__ . '/console/config/main-local.php'
 );
 
+// unset some components:
+unset($config['components']['user']);
+
 $application = new yii\console\Application($config);
 $exitCode = $application->run();
 exit($exitCode);
